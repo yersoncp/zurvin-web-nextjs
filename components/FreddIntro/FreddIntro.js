@@ -1,6 +1,6 @@
-import style from './Fredd-style'
+import style from './FreddIntro-style'
 
-const Fredd = () => (
+const FreddIntro = () => (
    <div className="fredd">
 
       <div className="fredd__inner">
@@ -32,4 +32,4 @@ const Fredd = () => (
    </div>
 )
 
-export default Fredd;
+export default FreddIntro;

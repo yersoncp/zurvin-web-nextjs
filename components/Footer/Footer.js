@@ -3,6 +3,7 @@ import style from './Footer-style';
 
 const linkDribbble = '//dribbble.com/yerson';
 const linkMedium = '//medium.com/zurvin';
+const linkGithubCode = '//github.com/yersoncp/zurvin-web-nextjs';
 
 const Footer = () => (
    <div className="footer">
@@ -22,7 +23,7 @@ const Footer = () => (
          </p>
 
          <div className="copyright">
-            <span>Hecho con ❤️ usando React y NextJS. <Link href="https://github.com/yersoncp/zurvin-web-nextjs"><a target="_blank">Open source</a></Link> </span>
+            <span>Hecho con ❤️ usando React y NextJS. <Link href={linkGithubCode}><a target="_blank">Open source</a></Link> </span>
          </div>
          
       </div>
