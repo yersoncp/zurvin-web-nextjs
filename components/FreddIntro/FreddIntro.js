@@ -24,7 +24,7 @@ const FreddIntro = () => (
          </div>
          <div>
             <p className="emoji">🛍</p>
-            <p>Recomentación de productos, contenido e imágenes.</p>
+            <p>Recomendación de productos, contenido e imágenes.</p>
          </div>
       </div>
 
