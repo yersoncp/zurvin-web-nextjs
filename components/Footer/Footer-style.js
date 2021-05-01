@@ -10,6 +10,7 @@ export default css`
       margin-top: 3rem;
    }
    .copyright {
+      font-size: 13px;
    }
    .copyright a {
       font-weight: 400;
