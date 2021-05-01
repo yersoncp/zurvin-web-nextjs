@@ -1,8 +1,10 @@
 # zurvin-web-nextjs
-Website open source - zurvin.com
+Código fuente de mi web zurvin.com basado en NextJS (React). Libre de uso.
 
-## Run
+Construido usando los superpoderes de [NextJS Framework](https://nextjs.org/)
+## Comandos
 
 ```
+npm install
 npm run dev
 ```
