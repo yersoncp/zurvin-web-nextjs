@@ -1,0 +1,26 @@
+{
+  "name": "zurvin-web-nextjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "export": "next export",
+    "deploy:web": "firebase deploy --only hosting:web"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-jsx": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4"
+  }
+}
