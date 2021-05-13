@@ -1,34 +1,33 @@
-import style from './FreddIntro-style'
+import s from './FreddIntro.module.css'
 
 const FreddIntro = () => (
-   <div className="fredd">
+   <div className={s.fredd}>
 
-      <div className="fredd__inner">
+      <div className={s.fredd__inner}>
          <img width="100px" src="images/fredd-white.svg" />
-         <h2>
+         <h2 className={s.title}>
             Motor de inteligencia predictiva para negocios digitales
          </h2>
-         <h3>
+         <h3 className={s.subtitle}>
             Algoritmos de inteligencia artificial para procesamiento predictivo de datos
          </h3>
       </div>
 
-      <div className="fredd__featured">
+      <div className={s.fredd__featured}>
          <div>
-            <p className="emoji">👨🏻‍💻</p>
+            <p className={s.emoji}>👨🏻‍💻</p>
             <p>Integración API RESTful con cualquier plataforma.</p>
          </div>
          <div>
-            <p className="emoji">🛒</p>
+            <p className={s.emoji}>🛒</p>
             <p>Usos para ecommerce, blogs y aplicaciones web y móviles.</p>
          </div>
          <div>
-            <p className="emoji">🛍</p>
+            <p className={s.emoji}>🛍</p>
             <p>Recomendación de productos, contenido e imágenes.</p>
          </div>
       </div>
 
-      <style jsx>{ style }</style>
    </div>
 )
 
