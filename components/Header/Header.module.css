@@ -1,0 +1,27 @@
+.header__inner {
+   padding: 2rem 0;
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   align-items: center;
+}
+
+.logo img {
+   max-width: 100px;
+}
+
+.menuWrapper {
+   text-align: right;
+}
+.button {
+   color: #ccc;
+   text-decoration: none;
+   transition: all .3s;
+   font-size: .85rem;
+   padding: 8px 15px;
+   background: #222;
+   border-radius: 4px;
+}
+.button:hover {
+   color: #fff;
+   background: #333;
+}
