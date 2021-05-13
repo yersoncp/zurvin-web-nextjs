@@ -16,4 +16,10 @@ export default css`
       font-weight: 400;
       text-decoration: none;
    }
+
+   .menu {
+      display: block;
+      line-height: 2rem;
+      font-size: .9rem;
+   }
 `

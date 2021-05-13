@@ -15,14 +15,17 @@ export default css`
    .menu-wrapper {
       text-align: right;
    }
-   .menu {
+   .button {
       color: #ccc;
       text-decoration: none;
       transition: all .3s;
-      font-size: 12px;
-      padding: 5px 15px;
+      font-size: .85rem;
+      padding: 8px 15px;
+      background: #222;
+      border-radius: 4px;
    }
-   .menu:hover {
+   .button:hover {
       color: #fff;
+      background: #333;
    }
 `;

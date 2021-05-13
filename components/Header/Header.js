@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import style from './Header-style';
+import c from 'classnames';
 
-const linkMedium = '//medium.com/zurvin';
-const linkContact = 'hola@zurvin';
+const linkFredd = '//fredd-project-webapp.vercel.app/';
 
 const Header = () => (
    <div className="header">
@@ -14,8 +14,7 @@ const Header = () => (
          </Link>
 
          <div className="menu-wrapper">
-            <Link href={linkMedium}><a className="menu" target="_blank">BLOG</a></Link>
-            <Link href={linkContact}><a className="menu" target="_blank">CONTACTO</a></Link>
+            <Link href={linkFredd}><a className="button" target="_blank">Ingresar a Fredd</a></Link>
          </div>
       </div>
       <style jsx>{ style }</style>
