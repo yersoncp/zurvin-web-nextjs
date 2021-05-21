@@ -4,12 +4,13 @@ const Meta = () => (
   <div>
     
     <Head>
-      <title>Zurvin – FullStack JavaScript</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="keywords" content="paginas web huancayo, desarrollo frontend, html, angular, nodejs, web, css, javascript, webdesign" />
-      <link rel="shortcut icon" href="favicon.png" />
-      <meta name="theme-color" content="#0357dd" />
+      <title>Zurvin | Construimos productos digitales hermosos</title>
       <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Somos cinturón negro en JavaScript y amamos construir aplicaciones web." />
+      <link rel="shortcut icon" href="favicon.png" />
+      <meta name="theme-color" content="#080808" />
+      
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
     </Head>
