@@ -10,7 +10,8 @@ const Meta = () => (
       <link rel="shortcut icon" href="favicon.png" />
       <meta name="theme-color" content="#0357dd" />
       <meta charSet="utf-8" />
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
     </Head>
 
     <style jsx global>{`
@@ -20,8 +21,9 @@ const Meta = () => (
         background: #080808;
         color: rgb(134, 143, 151);
         height: 100%;
-        font-family: "Roboto", Helvetica, sans-serif;
+        font-family: 'Roboto Mono', monospace;
         font-weight: 300;
+        letter-spacing: -.5px;
       }
       img {
         max-width: 100%;

@@ -3,7 +3,7 @@ import style from './Footer-style';
 
 const linkDribbble = '//dribbble.com/yerson';
 const linkMedium = '//medium.com/zurvin';
-const linkContact = 'hola@zurvin.com';
+const linkContact = 'mailto:hola@zurvin.com';
 const linkGithubCode = '//github.com/yersoncp/zurvin-web-nextjs';
 
 const Footer = () => (
@@ -24,7 +24,7 @@ const Footer = () => (
          </p>
 
          <div className="copyright">
-            <span>Hecho con ❤️ usando React y NextJS.</span>
+            <span>© 2021 Zurvin. All rights reserved. Hecho con ❤️ usando React y NextJS.</span>
          </div>
          
       </div>

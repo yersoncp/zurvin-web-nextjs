@@ -6,10 +6,10 @@ const FreddIntro = () => (
       <div className={s.fredd__inner}>
          <img width="100px" src="images/fredd-white.svg" />
          <h2 className={s.title}>
-            Motor de inteligencia predictiva para negocios digitales
+            Motor de <b>inteligencia predictiva</b> para negocios digitales
          </h2>
          <h3 className={s.subtitle}>
-            Algoritmos de inteligencia artificial para procesamiento predictivo de datos
+            Algoritmos de inteligencia artificial para procesamiento predictivo de datos.
          </h3>
       </div>
 
