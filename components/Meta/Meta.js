@@ -12,7 +12,7 @@ const Meta = () => (
       <meta name="theme-color" content="#080808" />
       
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
     </Head>
 
     <style jsx global>{`
@@ -22,9 +22,8 @@ const Meta = () => (
         background: #080808;
         color: rgb(134, 143, 151);
         height: 100%;
-        font-family: 'Roboto Mono', monospace;
-        font-weight: 300;
-        letter-spacing: -.5px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 200;
       }
       img {
         max-width: 100%;
