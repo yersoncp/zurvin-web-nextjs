@@ -1,0 +1,33 @@
+.footer {
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr;
+   grid-column-gap: 4rem;
+   padding: 80px 0 40px 0;
+   border-top: 1px solid #181818;
+   margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+   .footer {
+      display: block;
+   }
+}
+
+.footer div {
+   margin-bottom: 2rem;
+}
+
+.copyright {
+   font-size: 13px;
+   margin: 2rem 0;
+}
+.copyright a {
+   font-weight: 400;
+   text-decoration: none;
+}
+
+.menu {
+   display: block;
+   line-height: 2rem;
+   font-size: .9rem;
+}

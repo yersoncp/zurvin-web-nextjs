@@ -33,7 +33,16 @@ const Meta = () => (
         line-height: 26px;
       }
       a {
+        color: #999;
+        transition: all .3s;
+      }
+      a:hover {
         color: #fff;
+        cursor: pointer;
+      }
+      h3 {
+        color: #ffF;
+        font-weight: 500;
       }
     `}</style>
   </div>
