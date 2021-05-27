@@ -17,7 +17,7 @@ const Footer = () => (
                </a>
             </Link>
             <p className={s.slogan}>
-               Somos cinturón negro en JavaScript y amamos construir aplicaciones web.
+               Construimos productos digitales hermosos.
             </p>
             
          </div>
@@ -25,8 +25,8 @@ const Footer = () => (
          <div>
             <h3>Nosotros</h3>
             <Link href={linkMedium}><a className={s.menu} target="_blank">Blog</a></Link>
-            <Link href={linkGithubCode}><a className={s.menu} target="_blank">Open source</a></Link>
-            <Link href={linkDribbble}><a className={s.menu} target="_blank">Dribbble</a></Link>
+            {/* <Link href={linkGithubCode}><a className={s.menu} target="_blank">Open source</a></Link> */}
+            {/* <Link href={linkDribbble}><a className={s.menu} target="_blank">Dribbble</a></Link> */}
          </div>
 
          <div>
