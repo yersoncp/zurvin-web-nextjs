@@ -34,6 +34,11 @@
    grid-template-columns: auto auto auto;
    grid-column-gap: 2rem;
 }
+.feature__title {
+   margin-top: 0;
+   font-weight: 500;
+   font-size: 1.8rem;
+}
 
 .fredd__featured div {
    background: #1b1b1b;

@@ -31,13 +31,8 @@ const FreddIntro = () => (
          </div>
 
          <div>
-            <img width="100px" src="images/fredd-white.svg" />
-            <p>Motor de recomendaciones basado en Inteligencia Artificial para e-commerce.</p>
-            <a
-               className="link"
-               target="_blank"
-               href="https://hifredd.com/"
-               >hifredd.com →</a>
+            <h3 className={s.feature__title}>Fredd Segment</h3>
+            <p>Segmenta usuarios en tiempo real y genera audiencias precisas y preciosas. (Working)</p>
          </div>
       </div>
 
