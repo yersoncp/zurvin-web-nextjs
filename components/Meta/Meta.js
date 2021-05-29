@@ -33,8 +33,15 @@ const Meta = () => (
         line-height: 26px;
       }
       a {
-        color: #999;
+        color: #888;
         transition: all .3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      a.link::after {
+        content: '';
+        display: block;
+        border-top: 1px dotted #444;
       }
       a:hover {
         color: #fff;
@@ -42,7 +49,13 @@ const Meta = () => (
       }
       h3 {
         color: #ffF;
-        font-weight: 500;
+        font-weight: 400;
+        font-size: 2rem;
+      }
+      h4 {
+        color: #ffF;
+        font-weight: 400;
+        font-size: 1.2rem;
       }
     `}</style>
   </div>

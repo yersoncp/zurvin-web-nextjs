@@ -13,7 +13,7 @@ const Header = () => (
          </Link>
 
          <div className={s.menuWrapper}>
-            <Link href={linkFredd}><a className={s.button} target="_blank">Ingresar a Fredd</a></Link>
+            {/* <Link href={linkFredd}><a className={s.button} target="_blank">Ingresar a Fredd</a></Link> */}
          </div>
       </div>
    </div>

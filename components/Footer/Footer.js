@@ -17,20 +17,20 @@ const Footer = () => (
                </a>
             </Link>
             <p className={s.slogan}>
-               Construimos productos digitales hermosos.
+               Estamos construyendo algo que nos apasiona desde el corazón.
             </p>
             
          </div>
 
          <div>
-            <h3>Nosotros</h3>
+            <h4>Nosotros</h4>
             <Link href={linkMedium}><a className={s.menu} target="_blank">Blog</a></Link>
-            {/* <Link href={linkGithubCode}><a className={s.menu} target="_blank">Open source</a></Link> */}
-            {/* <Link href={linkDribbble}><a className={s.menu} target="_blank">Dribbble</a></Link> */}
+            <Link href={linkGithubCode}><a className={s.menu} target="_blank">Open source</a></Link>
+            <Link href={linkDribbble}><a className={s.menu} target="_blank">Dribbble</a></Link>
          </div>
 
          <div>
-            <h3>Contacto</h3>
+            <h4>Contacto</h4>
             <Link href={linkContact}><a className={s.menu} target="_blank">Contacto</a></Link>
          </div>
       </div>
