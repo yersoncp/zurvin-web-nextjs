@@ -16,7 +16,7 @@ const FreddIntro = () => (
       </div>
 
       <div>
-         <h3>Projectos</h3>
+         <h3>Proyectos</h3>
       </div>
 
       <div className={s.fredd__featured}>
