@@ -34,17 +34,28 @@
    grid-template-columns: auto auto auto;
    grid-column-gap: 2rem;
 }
-.feature__title {
-   margin-top: 0;
-   font-weight: 500;
-   font-size: 1.8rem;
-}
 
-.fredd__featured div {
+.fredd__featured > div {
    background: #1b1b1b;
    padding: 2.5rem;
    border-radius: .5rem;
    color: #fff;
+}
+
+
+.feature__title {
+   font-weight: 100;
+}
+
+.feature__title img {
+   vertical-align: middle;
+}
+
+.feature__title span {
+   font-weight: 100;
+   font-size: 1.4rem;
+   color: #ccc;
+   vertical-align: middle;
 }
 
 @media (max-width: 600px) {

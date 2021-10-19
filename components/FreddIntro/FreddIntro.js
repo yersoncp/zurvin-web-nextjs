@@ -5,7 +5,7 @@ const FreddIntro = () => (
 
       <div className={s.fredd__inner}>
          <h2 className={s.title}>
-            Estamos <b>construyendo</b> algo que nos <b>apasiona</b> desde el corazón
+            <b>Construimos</b> cosas que nos <b>apasiona</b> desde el corazón
          </h2>
       </div>
 
@@ -21,7 +21,10 @@ const FreddIntro = () => (
 
       <div className={s.fredd__featured}>
          <div>
-            <img width="100px" src="images/fredd-white.svg" />
+         <div className={s.feature__title}>
+               <img width="100px" src="images/fredd-white.svg" />
+               <span> shop</span>
+            </div>
             <p>Motor de recomendaciones basado en Inteligencia Artificial para e-commerce.</p>
             <a
                className="link"
@@ -31,7 +34,10 @@ const FreddIntro = () => (
          </div>
 
          <div>
-            <h3 className={s.feature__title}>Fredd Segment</h3>
+            <div className={s.feature__title}>
+               <img width="100px" src="images/fredd-white.svg" />
+               <span> segment</span>
+            </div>
             <p>Segmenta usuarios en tiempo real y genera audiencias precisas y preciosas. (Working)</p>
          </div>
       </div>
