@@ -17,7 +17,7 @@ const Footer = () => (
                </a>
             </Link>
             <p className={s.slogan}>
-               Estamos construyendo algo que nos apasiona desde el corazón.
+               Construimos cosas que nos apasiona desde el corazón.
             </p>
             
          </div>
