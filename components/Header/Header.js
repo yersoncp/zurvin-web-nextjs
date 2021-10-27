@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import s from './Header.module.css';
 
-const linkFredd = '//fredd-project-webapp.vercel.app/';
+const linkFredd = '//blog.zurvin.com';
 
 const Header = () => (
    <div>
@@ -13,7 +13,7 @@ const Header = () => (
          </Link>
 
          <div className={s.menuWrapper}>
-            {/* <Link href={linkFredd}><a className={s.button} target="_blank">Ingresar a Fredd</a></Link> */}
+            <Link href={linkFredd}>Blog</Link>
          </div>
       </div>
    </div>

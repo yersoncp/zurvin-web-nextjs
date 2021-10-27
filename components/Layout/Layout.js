@@ -1,16 +1,16 @@
 import Header from '../Header/Header'
-import style from './Layout-style';
+import s from './Layout.module.css';
 import Meta from '../Meta/Meta';
 import Footer from '../Footer/Footer';
 
 const Layout = props => (
-   <div className="layout">
+   <div className={s.layout}>
+   
       <Meta />
       <Header />
       { props.children }
       <Footer />
 
-      <style jsx>{ style }</style>
    </div>
 )
 
