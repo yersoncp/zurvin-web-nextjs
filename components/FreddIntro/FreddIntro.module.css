@@ -40,15 +40,16 @@
 }
 
 .fredd__featured > div {
-   background: #1b1b1b;
-   border: 1px solid #444;
+   background: #111;
+   border: 1px solid #333;
    padding: 2.5rem;
    border-radius: .5rem;
    color: #fff;
+   transition: all .3s ease-in-out;
 }
 
 .fredd__featured > div:hover {
-   border: 1px solid #666;
+   border: 1px solid #555;
 }
 
 
