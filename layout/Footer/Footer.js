@@ -24,7 +24,7 @@ const Footer = () => (
 
          <div>
             <h4>Nosotros</h4>
-            <Link href={linkMedium}><a className={s.menu} target="_blank">Blog</a></Link>
+            <Link href={linkMedium}><a className={s.menu} target="_blank">Medium</a></Link>
             <Link href={linkGithubCode}><a className={s.menu} target="_blank">Open source</a></Link>
             <Link href={linkDribbble}><a className={s.menu} target="_blank">Dribbble</a></Link>
          </div>

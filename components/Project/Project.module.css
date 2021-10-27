@@ -34,10 +34,10 @@
 }
 
 @media (max-width: 600px) {
-   .fredd__featured  {
+   .featured  {
       display: block;
    }
-   .fredd__featured div {
+   .featured div {
       margin-bottom: 1rem;
    }
 }
