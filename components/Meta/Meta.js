@@ -11,7 +11,9 @@ const Meta = () => (
       <link rel="shortcut icon" href="favicon.png" />
       <meta name="theme-color" content="#080808" />
       
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
     </Head>
 
@@ -57,6 +59,14 @@ const Meta = () => (
         font-weight: 400;
         font-size: 1.2rem;
       }
+
+      .color-gradient {
+        background-color: #fce043;
+        background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
     `}</style>
   </div>
 );

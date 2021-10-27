@@ -5,7 +5,7 @@ const FreddIntro = () => (
 
       <div className={s.fredd__inner}>
          <h2 className={s.title}>
-            <b>Construimos</b> cosas que nos <b>apasiona</b> desde el corazón
+            Construimos aplicaciones web con el <span className="color-gradient"><b>corazón</b></span>
          </h2>
       </div>
 
