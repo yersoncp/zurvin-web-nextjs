@@ -1,14 +1,14 @@
 import Layout from '../layout/Layout/Layout'
 import Welcome from '../components/Welcome/Welcome'
 import Portfolio from '../components/Portfolio/Portfolio'
-import FreddIntro from '../components/FreddIntro/FreddIntro';
+import Project from '../components/Project/Project';
 import Stack from '../components/Stack/Stack';
 
 const Index = () => (
    <div>
       <Layout>
          <Welcome />
-         <FreddIntro />
+         <Project />
          {/* <Portfolio /> */}
          <Stack />
       </Layout>
