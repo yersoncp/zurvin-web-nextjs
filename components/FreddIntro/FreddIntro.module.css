@@ -1,38 +1,3 @@
-.fredd {
-   padding: 3rem 0;
-   display: block;
-}
-.fredd__inner {
-   max-width: 800px;
-   text-align: center;
-   margin: 0 auto;
-}
-.title {
-   font-size: 5rem;
-   line-height: 4.6rem;
-   font-weight: 300;
-   color: #fff;
-   margin: 2rem 0;
-   font-family: 'Roboto Mono', monospace;
-}
-
-.subtitle {
-   font-size: 1.3rem;
-   font-weight: 300;
-   line-height: 2rem;
-}
-
-@media (max-width: 600px) {
-   .title {
-      font-size: 1.8rem;
-      font-weight: 100;
-      line-height: 2.8rem;
-   }
-}
-.title b {
-   color: #fff;
-}
-
 .fredd__featured {
    display: grid;
    grid-template-columns: auto auto auto;
@@ -75,9 +40,4 @@
    .fredd__featured div {
       margin-bottom: 1rem;
    }
-}
-
-.emoji {
-   font-size: 1.6rem;
-   margin: 5px;
 }

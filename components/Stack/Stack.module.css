@@ -1,0 +1,16 @@
+.stack {
+    margin: 4rem 0;
+    text-align: center;
+ }
+ 
+ .stack div {
+    display: inline-block;
+    margin: 15px;
+    vertical-align: middle;
+ }
+ 
+ .stack img {
+    max-width: 100%;
+    max-height: 28px;
+    height: auto;
+ }
