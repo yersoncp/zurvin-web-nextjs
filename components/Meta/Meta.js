@@ -35,7 +35,7 @@ const Meta = () => (
         line-height: 26px;
       }
       a {
-        color: #888;
+        color: #ccc;
         transition: all .3s;
         text-decoration: none;
         display: inline-block;

@@ -3,11 +3,13 @@
    display: block;
 }
 .fredd__inner {
-   max-width: 700px;
+   max-width: 800px;
+   text-align: center;
+   margin: 0 auto;
 }
 .title {
    font-size: 5rem;
-   line-height: 4.2rem;
+   line-height: 4.6rem;
    font-weight: 300;
    color: #fff;
    margin: 2rem 0;
@@ -15,6 +17,7 @@
 }
 
 .subtitle {
+   font-size: 1.3rem;
    font-weight: 300;
    line-height: 2rem;
 }
@@ -38,9 +41,14 @@
 
 .fredd__featured > div {
    background: #1b1b1b;
+   border: 1px solid #444;
    padding: 2.5rem;
    border-radius: .5rem;
    color: #fff;
+}
+
+.fredd__featured > div:hover {
+   border: 1px solid #666;
 }
 
 

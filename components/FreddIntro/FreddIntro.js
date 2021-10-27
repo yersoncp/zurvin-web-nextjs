@@ -7,6 +7,8 @@ const FreddIntro = () => (
          <h2 className={s.title}>
             Construimos aplicaciones web con el <span className="color-gradient"><b>corazón</b></span>
          </h2>
+         <br />
+         <p className={s.subtitle}>Construimos aplicaciones web con React y cualquier framework JavaScript moderno</p>
       </div>
 
       <div>
@@ -15,13 +17,9 @@ const FreddIntro = () => (
          <br />
       </div>
 
-      <div>
-         <h3>Proyectos</h3>
-      </div>
-
       <div className={s.fredd__featured}>
          <div>
-         <div className={s.feature__title}>
+            <div className={s.feature__title}>
                <img width="100px" src="images/fredd-white.svg" />
                <span> shop</span>
             </div>
