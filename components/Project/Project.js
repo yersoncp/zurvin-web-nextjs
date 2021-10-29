@@ -15,7 +15,14 @@ const items = () => {
          description: 'Segmenta usuarios en tiempo real y genera audiencias precisas y preciosas. (Working)',
          textLink: '',
          link: ''
-      }
+      },
+      {
+         img: 'images/warypos-white.svg',
+         title: '',
+         description: 'Gestiona tu negocio de manera simple',
+         textLink: 'warypos.com',
+         link: 'https://www.warypos.com/'
+      },
    ]
 }
 
@@ -26,7 +33,7 @@ const Project = () => (
          { items().map(item => (
             <div>
                <div className={s.featured__title}>
-                  <img width="100px" src={ item.img } />
+                  <img src={ item.img } />
                   <span> { item.title }</span>
                </div>
                <p>{item.description}</p>

@@ -2,6 +2,7 @@
    display: grid;
    grid-template-columns: auto auto auto;
    grid-column-gap: 2rem;
+   grid-row-gap: 2rem;
 }
 
 .featured > div {
@@ -23,7 +24,8 @@
 }
 
 .featured__title img {
-   vertical-align: middle;
+   vertical-align: bottom;
+   height: 24px;
 }
 
 .featured__title span {
