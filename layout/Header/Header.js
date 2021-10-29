@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import PARAMS from '../../params/params';
 import s from './Header.module.css';
 
-const linkFredd = '//blog.zurvin.com';
+const linkBlog = PARAMS.links.blog;
 
 const Header = () => (
    <div>
@@ -13,7 +14,7 @@ const Header = () => (
          </Link>
 
          <div className={s.menuWrapper}>
-            <Link href={linkFredd}>Blog</Link>
+            <Link href={linkBlog}>Blog</Link>
          </div>
       </div>
    </div>
