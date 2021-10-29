@@ -7,7 +7,7 @@ const Welcome = () => (
             Construimos aplicaciones web con el <span className="color-gradient"><b>corazón</b></span>
          </h2>
          <br />
-         <p className={s.subtitle}>Construimos aplicaciones web con React y cualquier framework JavaScript moderno</p>
+         <p className={s.subtitle}>Usamos React y cualquier framework JavaScript moderno</p>
       </div>
    </div>
 )

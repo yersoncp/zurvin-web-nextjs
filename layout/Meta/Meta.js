@@ -52,17 +52,18 @@ const Meta = () => (
       h3 {
         color: #ffF;
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
       h4 {
         color: #ffF;
         font-weight: 400;
         font-size: 1.2rem;
+        font-family: 'Roboto Mono';
       }
 
       .color-gradient {
         background-color: #fce043;
-        background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+        background: linear-gradient(70.8deg, rgb(253, 70, 90) 20%, rgb(31, 42, 147) 120%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
