@@ -26,6 +26,7 @@ const Meta = () => (
         height: 100%;
         font-family: 'Inter', sans-serif;
         font-weight: 200;
+        font-size: .96rem;
       }
       img {
         max-width: 100%;

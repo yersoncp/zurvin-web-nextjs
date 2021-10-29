@@ -3,6 +3,7 @@ import Welcome from '../components/Welcome/Welcome'
 import Portfolio from '../components/Portfolio/Portfolio'
 import Project from '../components/Project/Project';
 import Stack from '../components/Stack/Stack';
+import Profile from '../components/Profile/Profile';
 
 const Index = () => (
    <div>
@@ -11,6 +12,7 @@ const Index = () => (
          <Project />
          {/* <Portfolio /> */}
          <Stack />
+         <Profile />
       </Layout>
    </div>
 )
