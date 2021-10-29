@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import PARAMS from '../../params/params';
 import AvatarMini from '../AvatarMini/AvatarMini';
 import s from './Profile.module.css';
 
-const linkGithub = '//github.com/yersoncp';
-const linkLinkedin = '//linkedin.com/in/yerson';
-const linkBlog = '//blog.zurvin.com/';
+const linkGithub = PARAMS.links.github;
+const linkLinkedin = PARAMS.links.linkedin;
+const linkBlog = PARAMS.links.blog;
 
 const Profile = () => (
     <div>
