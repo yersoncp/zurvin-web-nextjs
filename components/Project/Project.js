@@ -30,8 +30,8 @@ const Project = () => (
    <div>
 
       <div className={s.featured}>
-         { items().map(item => (
-            <div>
+         { items().map((item, key) => (
+            <div key={key}>
                <div className={s.featured__title}>
                   <img src={ item.img } />
                   <span> { item.title }</span>

@@ -19,7 +19,11 @@ const Footer = () => (
             <p className={s.slogan}>
                Construimos aplicaciones web con la corazón
             </p>
-            
+
+            <div className={s.avatar__container}>
+               <div className={s.avatar}></div>
+            </div>
+
          </div>
 
          <div>
