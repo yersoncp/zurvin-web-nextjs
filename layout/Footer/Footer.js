@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import s from './Footer.module.css';
 
 const linkDribbble = '//dribbble.com/yerson';
@@ -13,7 +14,12 @@ const Footer = () => (
          <div>
             <Link href="/">
                <a className={s.logo}>
-                  <img width="100px" src="images/zurvin-logo-white.svg" />
+                  <Image
+                     width={100}
+                     height={30}
+                     alt="Zurvin"
+                     src="/images/zurvin-logo-white.svg"
+                     />
                </a>
             </Link>
             <p className={s.slogan}>

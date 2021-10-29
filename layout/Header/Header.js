@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import PARAMS from '../../params/params';
 import s from './Header.module.css';
 
@@ -9,7 +10,12 @@ const Header = () => (
       <div className={s.header__inner}>
          <Link href="/">
             <a className={s.logo}>
-               <img src="images/zurvin-logo-white.svg" />
+               <Image
+                  width={100}
+                  height={30}
+                  alt="Zurvin"
+                  src="/images/zurvin-logo-white.svg"
+                  />
             </a>
          </Link>
 

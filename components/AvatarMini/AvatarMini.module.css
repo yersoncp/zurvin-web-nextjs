@@ -27,7 +27,7 @@
     border-radius: 50%;
     background-color: #ff3c3c;
     background: linear-gradient(70.8deg, rgb(253, 70, 90) 20%, rgb(31, 42, 147) 120%);
-    animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, .8) infinite;
+    animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, .6) infinite;
     z-index: -999;
   }
   
