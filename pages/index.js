@@ -11,7 +11,9 @@ const Index = () => (
          <Welcome />
          <Project />
          {/* <Portfolio /> */}
-         <Stack />
+         {/* <Stack /> */}
+         <br />
+         <br />
          <Profile />
       </Layout>
    </div>
