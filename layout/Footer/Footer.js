@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import s from './Footer.module.css';
+import PARAMS from '../../params/params';
 
-const linkDribbble = '//dribbble.com/yerson';
-const linkMedium = '//medium.com/zurvin';
-const linkContact = 'mailto:hola@zurvin.com';
-const linkGithubCode = '//github.com/yersoncp/zurvin-web-nextjs';
+const linkMedium = PARAMS.links.medium;
+const linkContact = PARAMS.links.mail;
+const linkGithubCode = PARAMS.links.githubWebsite;
 
 const Footer = () => (
    <div>
@@ -32,7 +32,6 @@ const Footer = () => (
             <h4>Nosotros</h4>
             <Link href={linkMedium}><a className={s.menu} target="_blank">Medium</a></Link>
             <Link href={linkGithubCode}><a className={s.menu} target="_blank">Open source</a></Link>
-            <Link href={linkDribbble}><a className={s.menu} target="_blank">Dribbble</a></Link>
          </div>
 
          <div>
