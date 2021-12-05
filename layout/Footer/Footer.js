@@ -42,7 +42,7 @@ const Footer = () => (
 
       <div>
          <div className={s.copyright}>
-            <span>2021 © Zurvin. All rights reserved. Hecho con ❤️ usando React.</span>
+            <span>2021 © Zurvin. Hecho con ❤️ usando React.</span>
          </div>
       </div>
 
