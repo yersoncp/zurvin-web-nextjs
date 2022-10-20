@@ -1,22 +1,21 @@
 .featured {
-   display: flex;
-   gap: 6rem;
 }
 
 .featured > div {
    color: #fff;
    transition: all .3s ease-in-out;
-   text-align: center;
    opacity: .65;
+   display: inline-block;
 }
 
 .featured__title {
    font-weight: 100;
+   padding: .75rem 4rem .75rem 0;
 }
 
 .featured__title img {
    vertical-align: bottom;
-   height: 24px;
+   height: 18px;
 }
 
 .featured__title span {
@@ -27,10 +26,4 @@
 }
 
 @media (max-width: 600px) {
-   .featured  {
-      display: block;
-   }
-   .featured div {
-      margin-bottom: 1rem;
-   }
 }

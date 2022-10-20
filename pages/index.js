@@ -9,7 +9,7 @@ const Index = () => (
    <div>
       <Layout>
          <Welcome />
-         <Project />
+         {/* <Project /> */}
          {/* <Portfolio /> */}
          {/* <Stack /> */}
          <br />

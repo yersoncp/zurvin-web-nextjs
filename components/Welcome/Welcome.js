@@ -4,7 +4,7 @@ const Welcome = () => (
    <div>
       <div className={s.inner}>
          <h2 className={s.title}>
-            I design and build custom <span className="color-gradient"><b>web</b></span> experiences
+            We develop high-quality <span className="color-gradient"><b>Software</b></span> for the modern web.
          </h2>
          <br />
       </div>

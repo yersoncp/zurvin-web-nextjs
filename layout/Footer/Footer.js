@@ -22,7 +22,7 @@ const Footer = () => (
                </a>
             </Link>
             <p className={s.slogan}>
-               I design and build custom web experiences with React
+               I build custom web experiences with React
             </p>
 
          </div>
