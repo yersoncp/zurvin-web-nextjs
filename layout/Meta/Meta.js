@@ -4,10 +4,10 @@ const Meta = () => (
   <div>
     
     <Head>
-      <title>Zurvin | Construimos aplicaciones web con el corazón</title>
+      <title>Zurvin | I design and build custom web experiences with React</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Somos cinturón negro en JavaScript y amamos construir aplicaciones web." />
+      <meta name="description" content="I design and build custom web experiences with React" />
       <link rel="shortcut icon" href="favicon.png" />
       <meta name="theme-color" content="#080808" />
       
@@ -20,7 +20,7 @@ const Meta = () => (
       body {
         margin: 0;
         padding: 0;
-        background: #080808;
+        background: #141414;
         color: rgb(134, 143, 151);
         height: 100%;
         font-family: 'Inter', sans-serif;

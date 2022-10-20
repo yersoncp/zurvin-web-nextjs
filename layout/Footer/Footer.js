@@ -9,7 +9,6 @@ const linkGithubCode = PARAMS.links.githubWebsite;
 
 const Footer = () => (
    <div>
-
       <div className={s.footer}>
          <div>
             <Link href="/">
@@ -23,26 +22,26 @@ const Footer = () => (
                </a>
             </Link>
             <p className={s.slogan}>
-               Construimos aplicaciones web con la corazón
+               I design and build custom web experiences with React
             </p>
 
          </div>
 
          <div>
-            <h4>Nosotros</h4>
+            <h4>About</h4>
             <Link href={linkMedium}><a className={s.menu} target="_blank">Medium</a></Link>
             <Link href={linkGithubCode}><a className={s.menu} target="_blank">Open source</a></Link>
          </div>
 
          <div>
-            <h4>Contacto</h4>
-            <Link href={linkContact}><a className={s.menu} target="_blank">Contacto</a></Link>
+            <h4>Contact</h4>
+            <Link href={linkContact}><a className={s.menu} target="_blank">Email</a></Link>
          </div>
       </div>
 
       <div>
          <div className={s.copyright}>
-            <span>2021 © Zurvin. Hecho con ❤️ usando React.</span>
+            <span>2022 © Zurvin. Build with ❤️ using React.</span>
          </div>
       </div>
 

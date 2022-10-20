@@ -14,7 +14,7 @@ const Index = () => (
          {/* <Stack /> */}
          <br />
          <br />
-         <Profile />
+         {/* <Profile /> */}
       </Layout>
    </div>
 )

@@ -1,23 +1,14 @@
 .featured {
-   display: grid;
-   grid-template-columns: auto auto auto;
-   grid-column-gap: 2rem;
-   grid-row-gap: 2rem;
+   display: flex;
+   gap: 6rem;
 }
 
 .featured > div {
-   background: #111;
-   border: 1px solid #333;
-   padding: 2.5rem;
-   border-radius: .5rem;
    color: #fff;
    transition: all .3s ease-in-out;
+   text-align: center;
+   opacity: .65;
 }
-
-.featured > div:hover {
-   border: 1px solid #555;
-}
-
 
 .featured__title {
    font-weight: 100;

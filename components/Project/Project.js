@@ -4,24 +4,24 @@ const items = () => {
    return [
       {
          img: 'images/fredd-white.svg',
-         title: 'shop',
-         description: 'Motor de recomendaciones basado en Inteligencia Artificial para e-commerce.',
-         textLink: 'hifredd.com',
-         link: 'https://hifredd.com/'
-      },
-      {
-         img: 'images/fredd-white.svg',
-         title: 'segment',
-         description: 'Segmenta usuarios en tiempo real y genera audiencias precisas y preciosas. (Working)',
+         title: '',
+         description: '',
          textLink: '',
          link: ''
       },
       {
          img: 'images/warypos-white.svg',
          title: '',
-         description: 'Gestiona tu negocio de manera simple',
-         textLink: 'warypos.com',
-         link: 'https://www.warypos.com/'
+         description: '',
+         textLink: '',
+         link: ''
+      },
+      {
+         img: 'images/yakufarma-white.svg',
+         title: '',
+         description: '',
+         textLink: '',
+         link: ''
       },
    ]
 }

@@ -19,9 +19,9 @@ const Header = () => (
             </a>
          </Link>
 
-         <div className={s.menuWrapper}>
+         {/* <div className={s.menuWrapper}>
             <Link href={linkBlog}>Blog</Link>
-         </div>
+         </div> */}
       </div>
    </div>
 )
