@@ -4,10 +4,10 @@ const Meta = () => (
   <div>
     
     <Head>
-      <title>Zurvin | I build custom web experiences with React</title>
+      <title>Zurvin | React, TypeScript, JavaScript y CSS</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="I build custom web experiences with React" />
+      <meta name="description" content="React, TypeScript, JavaScript y CSS" />
       <link rel="shortcut icon" href="favicon.png" />
       <meta name="theme-color" content="#080808" />
       
@@ -52,8 +52,14 @@ const Meta = () => (
         cursor: pointer;
       }
 
+      h1.title {
+        color: #ffF;
+        font-weight: 300;
+        font-size: 3rem;
+        font-family: 'IBM Plex Mono', monospace;
+      }
 
-      h2 {
+      h2.title {
         color: #ffF;
         font-weight: 300;
         font-size: 3rem;
@@ -75,6 +81,15 @@ const Meta = () => (
         background: linear-gradient(70.8deg,#8bc34a 20%,#ffc107 120%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+      
+      pre {
+        border: 1px solid #1b2030;
+        background-color: #0d0e15;
+        border-radius: 8px;
+        padding: 1rem;
+        line-height: 1.25rem;
+        font-size: .85rem;
       }
 
     `}</style>

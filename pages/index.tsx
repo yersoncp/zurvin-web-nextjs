@@ -15,7 +15,7 @@ type Props = {
 export default function Index({ allPosts }: Props) {
    return (
     <Layout>
-      <h2 className="color-gradient">Blog</h2>
+      <h2 className="color-gradient title">Blog</h2>
 
       {allPosts?.map(post => (
         <PostPreview

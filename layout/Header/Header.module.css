@@ -1,8 +1,9 @@
 .header__inner {
    padding: 2rem 0;
-   display: grid;
-   grid-template-columns: 1fr 3fr;
+   display: flex;
    align-items: center;
+   gap: 4rem;
+   border-bottom: 1px dotted #181820;
 }
 
 .logo img {
@@ -10,7 +11,10 @@
 }
 
 .menuWrapper {
-   text-align: right;
    font-weight: normal;
+}
+
+.menuWrapper > * {
+   margin-right: 2rem;
 }
 

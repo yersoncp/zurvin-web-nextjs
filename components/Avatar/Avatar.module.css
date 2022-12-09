@@ -1,0 +1,13 @@
+.AvatarContainer {
+    display: flex;
+    gap: .8rem;
+    place-items: center;
+    margin-bottom: 2rem;
+}
+
+.Avatar {
+    height: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+}
