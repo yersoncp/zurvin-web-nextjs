@@ -22,7 +22,7 @@ const Meta = () => (
       body {
         margin: 0;
         padding: 0;
-        background: #141414;
+        background: #080910;
         color: rgb(134, 143, 151);
         height: 100%;
         font-family: 'Inter', sans-serif;
@@ -50,6 +50,14 @@ const Meta = () => (
       a:hover {
         color: #fff;
         cursor: pointer;
+      }
+
+
+      h2 {
+        color: #ffF;
+        font-weight: 300;
+        font-size: 3rem;
+        font-family: 'IBM Plex Mono', monospace;
       }
       h3 {
         color: #ffF;
