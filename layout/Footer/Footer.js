@@ -12,14 +12,12 @@ const Footer = () => (
       <div className={s.footer}>
          <div>
             <Link href="/">
-               <a className={s.logo}>
-                  <Image
-                     width={100}
-                     height={30}
-                     alt="Zurvin"
-                     src="/images/zurvin-logo-white.svg"
-                     />
-               </a>
+               <Image
+                  width={100}
+                  height={30}
+                  alt="Zurvin"
+                  src="/images/zurvin-logo-white.svg"
+                  />
             </Link>
             <p className={s.slogan}>
                I build custom web experiences with React
@@ -29,13 +27,13 @@ const Footer = () => (
 
          <div>
             <h4>About</h4>
-            <Link href={linkMedium}><a className={s.menu} target="_blank">Medium</a></Link>
-            <Link href={linkGithubCode}><a className={s.menu} target="_blank">Open source</a></Link>
+            <Link href={linkMedium}>Medium</Link>
+            <Link href={linkGithubCode}>Open source</Link>
          </div>
 
          <div>
             <h4>Contact</h4>
-            <Link href={linkContact}><a className={s.menu} target="_blank">Email</a></Link>
+            <Link href={linkContact}>Email</Link>
          </div>
       </div>
 

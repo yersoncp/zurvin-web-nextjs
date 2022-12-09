@@ -8,15 +8,13 @@ const linkBlog = PARAMS.links.blog;
 const Header = () => (
    <div>
       <div className={s.header__inner}>
-         <Link href="/">
-            <a className={s.logo}>
-               <Image
-                  width={100}
-                  height={30}
-                  alt="Zurvin"
-                  src="/images/zurvin-logo-white.svg"
-                  />
-            </a>
+         <Link href="/" id="logo">
+            <Image
+               width={100}
+               height={30}
+               alt="Zurvin"
+               src="/images/zurvin-logo-white.svg"
+               />
          </Link>
 
          {/* <div className={s.menuWrapper}>

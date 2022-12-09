@@ -34,12 +34,10 @@ function getPortfolios() {
 const SinglePortfolio = ({ post }) => (
    <div>
       <Link href={ post.link }>
-         <a>
-            <img
-               alt={ post.title }
-               src={ post.image }
-            />
-         </a>
+         <img
+            alt={ post.title }
+            src={ post.image }
+         />
       </Link>
 
       <style jsx>{ singlePortfolio }</style>
