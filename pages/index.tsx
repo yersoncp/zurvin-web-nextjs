@@ -19,6 +19,7 @@ export default function Index({ allPosts }: Props) {
 
       {allPosts?.map(post => (
         <PostPreview
+          key={post.slug}
           title={post.title}
           coverImage={post.coverImage}
           date={post.date}

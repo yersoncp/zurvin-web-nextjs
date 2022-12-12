@@ -5,6 +5,11 @@
     margin-bottom: 2rem;
 }
 
+.AvatarContainer span {
+    font-size: 15px;
+    color: #565b65;
+}
+
 .Avatar {
     height: 36px;
     height: 36px;

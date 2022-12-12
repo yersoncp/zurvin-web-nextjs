@@ -3,6 +3,7 @@ import DateFormatter from '../DateFormatter/DateFormatter'
 import CoverImage from '../CoverImage/CoverImage'
 import PostTitle from '../PostTitle/PostTitle'
 import Author from '../../interfaces/author'
+import s from './PostHeader.module.css'
 
 type Props = {
   title: string
@@ -13,10 +14,13 @@ type Props = {
 
 const PostHeader = ({ title, coverImage, date, author }: Props) => {
   return (
-    <>
+    <div className={s.PostHeader__Container}>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        <Avatar name={author.name} picture={author.picture} />
+
+      <Avatar name={author.name} picture={author.picture} />
+
+      <div className={s.PostHeader__date}>
+        <DateFormatter dateString={date} />
       </div>
 
       <div className="mb-8 md:mb-16 sm:mx-0">
@@ -25,10 +29,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
         ): null}
       </div>
 
-      <div className="mb-6 text-lg">
-        <DateFormatter dateString={date} />
-      </div>
-    </>
+    </div>
   )
 }
 

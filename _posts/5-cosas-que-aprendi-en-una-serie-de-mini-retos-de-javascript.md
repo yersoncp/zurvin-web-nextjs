@@ -35,3 +35,6 @@ Al final de cada reto no sólo compartes una porción de código. ¿Cuántas vec
 
 ## 5. Ser constantes
 Eran 10 mini-retos, sí, sólo 10, pero había que terminarlos. Eso conlleva a sentarse cada noche y terminar lo que se tenía que terminar.
+
+Les comparto el repositorio si quieren hecharle un ojo:
+[https://github.com/yersoncp/js-fronteros-miniretos-t1](https://github.com/yersoncp/js-fronteros-miniretos-t1)

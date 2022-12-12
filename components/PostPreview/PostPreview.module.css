@@ -1,0 +1,12 @@
+.title a {
+    font-size: 1.65rem;
+    line-height: 2.4rem;
+}
+
+.pharagraph {
+    font-family: 'Source Serif 4', serif;
+    font-size: 17px;
+    letter-spacing: .25px;
+    color: #9295a2;
+    line-height: 1.8rem;
+}
