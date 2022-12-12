@@ -23,7 +23,7 @@ const PostPreview = ({
   slug,
 }: Props) => {
   return (
-    <section>
+    <section className={s.PostPreview__container}>
       <div className="mb-8 md:mb-16">
         {coverImage ? (
           <CoverImage title={title} src={coverImage} slug={slug} />
@@ -31,7 +31,7 @@ const PostPreview = ({
       </div>
       <div>
         <div>
-          <h3 className={s.title}>
+          <h3 className={s.PostPreview__title}>
             <Link
               as={`/posts/${slug}`}
               href="/posts/[slug]"
@@ -44,7 +44,7 @@ const PostPreview = ({
           </div>
         </div>
         <div>
-          <p className={s.pharagraph}>{excerpt}</p>
+          <p className={s.PostPreview__p}>{excerpt}</p>
           <Avatar name={author.name} picture={author.picture} />
         </div>
       </div>

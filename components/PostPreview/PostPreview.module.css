@@ -1,9 +1,13 @@
-.title a {
+.PostPreview__container {
+    margin-bottom: 4rem;
+}
+
+.PostPreview__title a {
     font-size: 1.65rem;
     line-height: 2.4rem;
 }
 
-.pharagraph {
+.PostPreview__p {
     font-family: 'Source Serif 4', serif;
     font-size: 17px;
     letter-spacing: .25px;
