@@ -20,6 +20,10 @@
     line-height: 1.8rem;
 }
 
+.markdown pre {
+    overflow: auto;
+}
+
 .markdown code {
     color: #fff;
 }
