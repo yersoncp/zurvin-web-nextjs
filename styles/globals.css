@@ -8,10 +8,6 @@ body {
   font-weight: 200;
   font-size: .96rem;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
 a, p {
   line-height: 26px;
 }

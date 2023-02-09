@@ -15,14 +15,14 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Script
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-Z18LPNE7M2`}
         async
       />
 
       <Script
         id="google-analytics-script"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         async
       >
         {`
