@@ -9,7 +9,8 @@ const PostTitle = ({ children }: Props) => {
     <h1
       style={{
         fontSize: "2.4rem", padding: "2rem 0",
-        fontFamily: 'IBM Plex Mono', color: '#fff',
+        fontFamily: 'Poppins', color: '#fff',
+        fontWeight: 400,
       }}
       className="title"
     >

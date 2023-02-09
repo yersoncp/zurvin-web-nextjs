@@ -12,10 +12,10 @@ export default function Index({ allPosts }: Props) {
   return (
     <Layout>
       <h2
-        style={{ fontSize: '3rem', fontFamily: 'IBM Plex Mono', display: 'inline-block' }}
+        style={{ fontSize: '3.5rem', fontFamily: 'Poppins', display: 'inline-block' }}
         className="color-gradient"
       >
-        Blog
+        Blog. Share.
       </h2>
 
       {allPosts?.map(post => (
