@@ -8,7 +8,13 @@ type Props = {
 const Avatar = ({ name, picture }: Props) => {
   return (
     <div className={s.AvatarContainer}>
-      <img src={picture} className={s.Avatar} alt={name} />
+      <img
+        src={picture}
+        className={s.Avatar}
+        alt={name}
+        width={36}
+        height={36}
+      />
       <span>{name}</span>
     </div>
   )
