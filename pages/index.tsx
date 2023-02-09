@@ -1,8 +1,4 @@
 import Layout from '../layout/Layout/Layout'
-import Portfolio from '../components/Portfolio/Portfolio'
-import Project from '../components/Project/Project';
-import Stack from '../components/Stack/Stack';
-import Profile from '../components/Profile/Profile';
 
 import Post from '../interfaces/post'
 import { getAllPosts } from '../libs/api'
