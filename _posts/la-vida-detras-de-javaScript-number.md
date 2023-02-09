@@ -4,7 +4,7 @@ excerpt: 'Los bits lo son todo. Van provistos de 1 y 0. Normalmente toman formas
 coverImage: ''
 date: '2019-11-22T05:35:07.322Z'
 author:
-  name: Yeson Carhuallanqui
+  name: Yerson
   picture: 'https://miro.medium.com/fit/c/176/176/1*R_zu8OlVoQqAURR9tnUl8A.png'
 ogImage:
   url: ''

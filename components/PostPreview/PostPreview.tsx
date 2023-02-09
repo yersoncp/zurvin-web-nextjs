@@ -29,6 +29,7 @@ const PostPreview = ({
           <CoverImage title={title} src={coverImage} slug={slug} />
         ) : null}
       </div>
+
       <div>
         <div>
           <h3 className={s.PostPreview__title}>

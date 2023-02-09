@@ -4,7 +4,7 @@ excerpt: 'Refactorizando nuestra solución para ver distintas formas de resolver
 coverImage: ''
 date: '2021-11-13T05:35:07.322Z'
 author:
-  name: Yeson Carhuallanqui
+  name: Yerson
   picture: 'https://miro.medium.com/fit/c/176/176/1*R_zu8OlVoQqAURR9tnUl8A.png'
 ogImage:
   url: ''

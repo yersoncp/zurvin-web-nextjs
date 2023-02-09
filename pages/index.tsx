@@ -5,13 +5,18 @@ import { getAllPosts } from '../libs/api'
 import PostPreview from '../components/PostPreview/PostPreview';
 
 type Props = {
-   allPosts: Post[]
+  allPosts: Post[]
 }
 
 export default function Index({ allPosts }: Props) {
-   return (
+  return (
     <Layout>
-      <h2 className="color-gradient title">Blog</h2>
+      <h2
+        style={{ fontSize: '3rem', fontFamily: 'IBM Plex Mono', display: 'inline-block' }}
+        className="color-gradient"
+      >
+        Blog
+      </h2>
 
       {allPosts?.map(post => (
         <PostPreview
@@ -24,21 +29,21 @@ export default function Index({ allPosts }: Props) {
           excerpt={post.excerpt}
         />
       ))}
-   </Layout>
-   )
- }
- 
- export const getStaticProps = async () => {
-   const allPosts = getAllPosts([
-     'title',
-     'date',
-     'slug',
-     'author',
-     'coverImage',
-     'excerpt',
-   ])
- 
-   return {
-     props: { allPosts },
-   }
- }
+    </Layout>
+  )
+}
+
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+  ])
+
+  return {
+    props: { allPosts },
+  }
+}

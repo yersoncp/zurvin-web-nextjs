@@ -10,8 +10,14 @@
    max-width: 100px;
 }
 
-.menuWrapper {
-   font-weight: normal;
+.menuWrapper a {
+  color: #ccc;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.menuWrapper a:hover {
+  color: #fff;
 }
 
 .menuWrapper > * {

@@ -1,16 +1,24 @@
 .PostPreview__container {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .PostPreview__title a {
-    font-size: 1.65rem;
-    line-height: 2.4rem;
+  font-size: 1.75rem;
+  line-height: 2.4rem;
+  font-family: 'Inter';
+  color: #ccc;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.PostPreview__title a:hover {
+  color: #fff;
 }
 
 .PostPreview__p {
-    font-family: serif;
-    font-size: 18px;
-    letter-spacing: .25px;
-    color: #9295a2;
-    line-height: 1.8rem;
+  font-family: 'Inter';
+  font-size: 17px;
+  letter-spacing: .25px;
+  color: #9295a2;
+  line-height: 1.8rem;
 }

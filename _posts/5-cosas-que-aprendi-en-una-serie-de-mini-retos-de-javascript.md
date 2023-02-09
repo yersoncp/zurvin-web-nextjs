@@ -4,7 +4,7 @@ excerpt: 'Durante un mes hicimos una serie de 10 mini-retos; nada que pueda toma
 coverImage: ''
 date: '2019-10-30T05:35:07.322Z'
 author:
-  name: Yeson Carhuallanqui
+  name: Yerson
   picture: 'https://miro.medium.com/fit/c/176/176/1*R_zu8OlVoQqAURR9tnUl8A.png'
 ogImage:
   url: ''
