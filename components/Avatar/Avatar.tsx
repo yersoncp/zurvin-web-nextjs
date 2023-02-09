@@ -12,8 +12,8 @@ const Avatar = ({ name, picture }: Props) => {
         src={picture}
         className={s.Avatar}
         alt={name}
-        width={36}
-        height={36}
+        width={32}
+        height={32}
       />
       <span>{name}</span>
     </div>

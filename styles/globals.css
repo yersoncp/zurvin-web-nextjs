@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #080910;
+  color: rgb(134, 143, 151);
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: .96rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a, p {
+  line-height: 26px;
+}
+.color-gradient {
+  background-color: #fce043;
+  background: linear-gradient(70.8deg,#8bc34a 20%,#ffc107 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import PARAMS from '../../params/params';
 import s from './Header.module.css';
 
 const Header = () => (
