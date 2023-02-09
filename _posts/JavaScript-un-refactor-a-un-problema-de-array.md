@@ -10,9 +10,9 @@ ogImage:
   url: ''
 ---
 
-Encontré un ejercicio relativamente sencillo en la ruta de entrenamiento de JavaScript de freecodecamp. Aquí les dejo el enlace: [freecodecamp.org/learn/javascript-algorithm...](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/return-largest-numbers-in-arrays)
+Encontré un ejercicio en la ruta de entrenamiento de JavaScript de freecodecamp. Aquí les dejo el enlace: [freecodecamp.org/learn/javascript-algorithm...](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/return-largest-numbers-in-arrays)
 
-En líneas generales pide que a partir de un array formado por otros array se genere un array resultante en base al número mayor de cada array. De la siguiente forma:
+Básicamente pide que a partir de un array formado por otros array se genere un array resultante en base al número mayor de cada array. De la siguiente forma:
 
 
 ```
@@ -30,11 +30,11 @@ En líneas generales pide que a partir de un array formado por otros array se ge
 [5, 27, 39, 1001] // Array formado por los números mayores
 ```
 
-Existen varios caminos para resolver el problema, sin embargo mi propósito es explicar cómo a partir de una solución de alguien que se inicia en JavaScript se puede optimizar el código.
+Existen varios caminos para resolver el problema, sin embargo mi propósito es explicar cómo a partir de una solución inicial se puede llegar a optimizar el código.
 
 ## Solución 1:
 
-Vemos que es un array de array, la idea inicial es hacer una primera iteración para recorrer el array general y posteriormente realizar una segunda iteración para el array interior. Esto es algo que no haría. Es cierto que finalmente se llega al resultado, pero ¿es legible leer el código?.
+Vemos que es un array de array, la idea inicial es hacer una primera iteración para recorrer el array general y luego realizar una segunda iteración para el array interior. Esto es algo que no haría pero ¿es legible leer el código?.
 
 ```
 function largestOfFour(arr) {
@@ -54,7 +54,8 @@ function largestOfFour(arr) {
 
 ## Solución 2: El refactor
 
-Para obtener el número mayor o menor existe una función matemática en JavaScript. `Math.max` o `Math.min` permite obtener el número máximo o mínimo respectivamente. Veamos como queda:
+Para obtener el número mayor o menor existe una función matemática en JavaScript.
+`Math.max` o `Math.min` nos permite obtener el número máximo o mínimo respectivamente. Veamos como queda:
 
 ```
 function largestOfFour(arr) {
@@ -67,7 +68,7 @@ function largestOfFour(arr) {
 }
 ```
 
-¿Qué tal? ¿mejor, verdad?. Logramos quitar la iteración interna y el código es mas legible. Personalmente usar un `for of` me resulta más limpio y evita calcular `arr.length` en la iteración. Reemplazemos `for` por `for of` y según vemos la variable `mayor` ya no es útil.
+¿Qué tal? ¿mejor, verdad?. Logramos quitar la iteración interna y el código es mas legible. Personalmente usar un `for of` me resulta más limpio y evita calcular `arr.length` en la iteración. Reemplazamos `for` por `for of` y quitamos la variable `mayor` ya no es útil.
 
 ```
 function largestOfFour(arr) {
@@ -81,7 +82,7 @@ function largestOfFour(arr) {
 
 ## Solución 3: El refactor del refactor
 
-Ok, vamos un paso más. Resulta que en lugar de usar `for` o `for of` podemos usar `map` para ir recorriendo los elementos. Con ello evitamos usar la variable `result` que lo único que hace es almacenar la respuesta. `map` por defecto retorna un array de elementos luego de transformar los elementos de la iteración.
+Ok, vamos un paso más. Resulta que en lugar de usar `for` o `for of` podemos usar `map` para ir recorriendo los elementos. Con ello evitamos usar la variable `result` que lo único que hace es almacenar la respuesta. Por defecto `map` retorna un array de elementos luego de transformar los elementos de la iteración.
 
 ```
 function largestOfFour(arr) {
