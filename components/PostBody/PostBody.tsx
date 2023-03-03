@@ -1,4 +1,6 @@
+import ReactMarkdown from 'react-markdown'
 import markdownStyles from './PostBody.module.css'
+import rehypeHighlight from 'rehype-highlight'
 
 type Props = {
   content: string
@@ -7,9 +9,10 @@ type Props = {
 const PostBody = ({ content }: Props) => {
   return (
     <div className="max-w-2xl mx-auto">
-      <div
+      <ReactMarkdown
         className={markdownStyles['markdown']}
-        dangerouslySetInnerHTML={{ __html: content }}
+        children={content}
+        rehypePlugins={[rehypeHighlight]}
       />
     </div>
   )

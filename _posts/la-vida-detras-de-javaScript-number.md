@@ -24,13 +24,13 @@ Hoy vamos a escudriñar la vida de los números:
 
 Los Number son, como es lógico, números. En Javascript podemos escribir así:
 
-```
+```js
 18
 ```
 
 En el interior se inicia un alboroto de ceros y unos para hacer que exista el 18 dentro de la memoria.
 
-```
+```js
 0     0    0    1    0   0   1   0
 128   64   32   16   8   4   2   1
 ```
@@ -47,7 +47,7 @@ El número entero máximo es cerca del rango de 9 trillones (9 con 15 ceros). Cu
 
 Algo de código, probemos en la consola:
 
-```
+```js
 Number.MAX_SAFE_INTEGER
 // 9007199254740991
 Number.MIN_SAFE_INTEGER
@@ -60,14 +60,14 @@ Tal como la teoría, el máximo y mínimo con precisión garantizada están en e
 
 Si añadimos +1 y +2 respectivamente y realizamos la igualdad obtenemos true. Matemáticamente esto no es posible.
 
-```
+```js
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2
 // true
 ```
 
 Ahora, probemos lo siguiente:
 
-```
+```js
 9007199254740991 + 1
 // 9007199254740992
 9007199254740991 + 2

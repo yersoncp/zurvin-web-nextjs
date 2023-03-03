@@ -12,7 +12,7 @@ export default function Index({ allPosts }: Props) {
   return (
     <Layout>
       <h2
-        style={{ fontSize: '3.5rem', fontFamily: 'Poppins', display: 'inline-block' }}
+        style={{ fontSize: '5rem', fontFamily: 'Poppins', display: 'inline-block' }}
         className="color-gradient"
       >
         Blog. Share.

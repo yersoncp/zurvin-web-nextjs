@@ -1,19 +1,64 @@
 body {
   margin: 0;
   padding: 0;
-  background: #080910;
-  color: rgb(134, 143, 151);
+  background: #0a0b0d;
+  color: #babcc4;
   height: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: sans-serif;
   font-weight: 200;
-  font-size: .96rem;
+  font-size: 17px;
 }
 a, p {
-  line-height: 26px;
+  line-height: 30px;
 }
 .color-gradient {
   background-color: #fce043;
   background: linear-gradient(70.8deg,#8bc34a 20%,#ffc107 120%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Code */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  color: #ccc;
+  padding: 1.25rem;
+  font-size: 14px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  line-height: 18px;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: rgb(223, 127, 68);
+  font-style: italic
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst,
+.hljs-property {
+  color: #31b6ce;
+  font-weight: 700
+}
+
+.hljs-params {
+  color: #f6a80d;
+}
+
+.hljs-literal,
+.hljs-number,
+.hljs-tag .hljs-attr,
+.hljs-template-variable,
+.hljs-variable {
+  color: #d56add
+}
+
+.hljs-section,
+.hljs-selector-id,
+.hljs-title {
+  color: rgb(112, 192, 59);
+  font-weight: 700
 }

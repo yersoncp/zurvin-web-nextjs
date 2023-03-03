@@ -1,7 +1,6 @@
 import Avatar from '../Avatar/Avatar'
 import DateFormatter from '../DateFormatter/DateFormatter'
 import CoverImage from '../CoverImage/CoverImage'
-import PostTitle from '../PostTitle/PostTitle'
 import Author from '../../interfaces/author'
 import s from './PostHeader.module.css'
 
@@ -15,7 +14,16 @@ type Props = {
 const PostHeader = ({ title, coverImage, date, author }: Props) => {
   return (
     <div className={s.PostHeader__Container}>
-      <PostTitle>{title}</PostTitle>
+      <h1
+      style={{
+        fontSize: "3rem", padding: "2rem 0",
+        fontFamily: 'Poppins', color: '#fff',
+        fontWeight: 400,
+      }}
+      className="title"
+    >
+      {title}
+    </h1>
 
       <Avatar name={author.name} picture={author.picture} />
 

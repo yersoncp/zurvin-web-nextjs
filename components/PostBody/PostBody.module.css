@@ -1,34 +1,8 @@
 .markdown h2 {
   color: #fff;
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin: 3rem 0;
-}
-
-.markdown h3 {
-  color: #ccc;
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin: 2rem 0;
-}
-
-.markdown p {
-  font-size: 17px;
-  letter-spacing: .25px;
-  color: #9295a2;
-  line-height: 1.8rem;
+  margin: 3rem 0 2rem
 }
 
 .markdown a {
-  color: #fff
-}
-
-.markdown pre {
-  overflow: auto;
-  background: #181a21;
-  padding: 1.5rem;
-}
-
-.markdown code {
-  color: #fff;
+  color: #31b6ce;
 }
