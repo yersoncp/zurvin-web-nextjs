@@ -1,6 +1,6 @@
 import type Author from './author'
 
-type PostType = {
+export type IPost = {
   slug: string
   title: string
   date: string
@@ -12,5 +12,3 @@ type PostType = {
   }
   markdown: string
 }
-
-export default PostType

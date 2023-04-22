@@ -1,14 +1,13 @@
 import Layout from '../layout/Layout/Layout'
-
-import Post from '../interfaces/post'
 import { getAllPosts } from '../libs/api'
 import PostPreview from '../components/PostPreview/PostPreview';
+import { IPost } from '../interfaces/post';
 
-type Props = {
-  allPosts: Post[]
+type IPostProps = {
+  allPosts: IPost[]
 }
 
-export default function Index({ allPosts }: Props) {
+export default function Index({ allPosts }: IPostProps) {
   return (
     <Layout>
       <h2

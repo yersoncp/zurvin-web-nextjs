@@ -2,14 +2,14 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import { getPostBySlug, getAllPosts } from '../../libs/api'
 import Head from 'next/head'
-import type PostType from '../../interfaces/post'
 import Layout from '../../layout/Layout/Layout'
 import PostBody from '../../components/PostBody/PostBody'
 import PostHeader from '../../components/PostHeader/PostHeader'
+import { IPost } from '../../interfaces/post'
 
 type Props = {
-    post: PostType
-    morePosts: PostType[]
+    post: IPost
+    morePosts: IPost[]
     preview?: boolean
 }
 

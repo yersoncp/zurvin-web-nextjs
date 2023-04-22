@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Zurvin | React, TypeScript, JavaScript y CSS</title>
+        <title>Zurvin | React, NextJS, TypeScript and JavaScript</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="React, TypeScript, JavaScript y CSS" />
