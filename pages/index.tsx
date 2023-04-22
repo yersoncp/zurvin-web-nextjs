@@ -1,13 +1,16 @@
 import Layout from '../layout/Layout/Layout'
+import { IPost } from '../interfaces/post';
 import { getAllPosts } from '../libs/api'
 import PostPreview from '../components/PostPreview/PostPreview';
-import { IPost } from '../interfaces/post';
 
 type IPostProps = {
   allPosts: IPost[]
 }
 
 export default function Index({ allPosts }: IPostProps) {
+  const recentPosts = allPosts?.slice(0, 2)
+  const otherPosts = allPosts?.slice(2, allPosts.length)
+
   return (
     <Layout>
       <h2
@@ -17,17 +20,25 @@ export default function Index({ allPosts }: IPostProps) {
         Blog. Share.
       </h2>
 
-      {allPosts?.map(post => (
+      <h3 style={{ fontSize: '2rem', fontFamily: 'Poppins', fontWeight: 400, color: '#fff' }}>Recientes</h3>
+      <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
+        {recentPosts?.map(post => (
+          <PostPreview
+            key={post.slug}
+            post={post}
+            showCover
+          />
+        ))}
+      </div>
+
+      <h3 style={{ fontSize: '2rem', fontFamily: 'Poppins', fontWeight: 400, color: '#fff' }}>Artículos</h3>
+      {otherPosts?.map((post, index) => (
         <PostPreview
           key={post.slug}
-          title={post.title}
-          coverImage={post.coverImage}
-          date={post.date}
-          author={post.author}
-          slug={post.slug}
-          excerpt={post.excerpt}
+          post={post}
         />
       ))}
+
     </Layout>
   )
 }

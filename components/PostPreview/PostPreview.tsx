@@ -1,32 +1,20 @@
-import Avatar from '../Avatar/Avatar'
 import CoverImage from '../CoverImage/CoverImage'
 import DateFormatter from '../DateFormatter/DateFormatter'
 import Link from 'next/link'
-import Author from '../../interfaces/author'
 import s from './PostPreview.module.css'
+import { IPost } from '../../interfaces/post'
 
-type Props = {
-  title: string
-  coverImage: string
-  date: string
-  excerpt: string
-  author: Author
-  slug: string
+type IPostPreviewProps = {
+  post: IPost
+  showCover?: boolean
 }
 
-const PostPreview = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
+const PostPreview = ({ post, showCover }: IPostPreviewProps) => {
   return (
     <section className={s.PostPreview__container}>
       <div className="mb-8 md:mb-16">
-        {coverImage ? (
-          <CoverImage title={title} src={coverImage} slug={slug} />
+        {(showCover && post.coverImage) ? (
+          <CoverImage title={post.title} src={post.coverImage} slug={post.slug} />
         ) : null}
       </div>
 
@@ -34,19 +22,19 @@ const PostPreview = ({
         <div>
           <h3 className={s.PostPreview__title}>
             <Link
-              as={`/posts/${slug}`}
+              as={`/posts/${post.slug}`}
               href="/posts/[slug]"
             >
-              {title}
+              {post.title}
             </Link>
           </h3>
           <div>
-            <DateFormatter dateString={date} />
+            <DateFormatter dateString={post.date} />
           </div>
         </div>
         <div>
-          <p className={s.PostPreview__p}>{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
+          <p className={s.PostPreview__p}>{post.excerpt}</p>
+          {/* <Avatar name={author.name} picture={author.picture} /> */}
         </div>
       </div>
     </section>

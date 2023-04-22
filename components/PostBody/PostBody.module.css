@@ -6,3 +6,13 @@
 .markdown a {
   color: #31b6ce;
 }
+
+.markdown p>code,
+.markdown ul li>code {
+  color: #31b6ce;
+}
+
+.markdown ul {
+  line-height: 1.8rem;
+  padding-left: 1.5rem;
+}
