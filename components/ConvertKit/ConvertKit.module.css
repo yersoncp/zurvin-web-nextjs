@@ -1,0 +1,13 @@
+.ConvertKit {
+  background: #1a1a1d;
+  border-radius: 8px;
+  padding: 2rem 3rem;
+  margin: 3rem 0;
+  display: block;
+}
+
+.ConvertKit h3 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
