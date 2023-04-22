@@ -1,7 +1,7 @@
 ---
 title: '🔥 Mis apuntes de expresiones regulares RegEx en JavaScript'
 excerpt: 'Les comparto mis apuntes de expresiones regulares RegEx en JavaScript.'
-coverImage: '/posts/aqMR9pQN_.avif'
+coverImage: '/posts/2.jpg'
 date: '2023-04-22T05:35:07.322Z'
 author:
   name: Yerson

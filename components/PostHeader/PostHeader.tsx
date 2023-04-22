@@ -31,11 +31,11 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
         <DateFormatter dateString={date} />
       </div>
 
-      <div className="mb-8 md:mb-16 sm:mx-0">
+      {/* <div className="mb-8 md:mb-16 sm:mx-0">
         {coverImage ? (
           <CoverImage title={title} src={coverImage} />
         ): null}
-      </div>
+      </div> */}
 
     </div>
   )
