@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://zurvin.com
+
+# Sitemaps
+Sitemap: https://zurvin.com/sitemap.xml
