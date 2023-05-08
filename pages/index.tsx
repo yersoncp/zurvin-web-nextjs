@@ -2,12 +2,18 @@ import Layout from '../layout/Layout/Layout'
 import { IPost } from '../interfaces/post';
 import { getAllPosts } from '../libs/api'
 import PostPreview from '../components/PostPreview/PostPreview';
+import { getDatabase } from '../libs/notion';
+import Link from 'next/link';
+import { getPostsFromNotion } from '../services/notion/notion.service';
+import { PostType } from '../services/notion/types/post.interface';
 
 type IPostProps = {
   allPosts: IPost[]
+  posts: PostType[]
+  preview: boolean
 }
 
-export default function Index({ allPosts }: IPostProps) {
+export default function Index({ allPosts, posts }: IPostProps) {
   const recentPosts = allPosts?.slice(0, 2)
   const otherPosts = allPosts?.slice(2, allPosts.length)
 
@@ -39,11 +45,38 @@ export default function Index({ allPosts }: IPostProps) {
         />
       ))}
 
+      <h2>All Posts</h2>
+        <ol>
+          {posts?.map((post) => {
+            const date = new Date(post.properties.date.date.start).toLocaleString(
+              "en-US",
+              {
+                month: "short",
+                day: "2-digit",
+                year: "numeric",
+              }
+            );
+            return (
+              <li key={post.id}>
+                <h3>
+                  <Link href={`/${post.id}`}>
+                    {post.properties.page.title[0].text.content}
+                  </Link>
+                </h3>
+
+                <p>{date}</p>
+                <Link href={`/${post.id}`}>Read post →</Link>
+              </li>
+            );
+          })}
+        </ol>
+
     </Layout>
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ preview }) => {
+  let posts = []
   const allPosts = getAllPosts([
     'title',
     'date',
@@ -53,7 +86,21 @@ export const getStaticProps = async () => {
     'excerpt',
   ])
 
+  // Start
+  try {
+    posts = await getPostsFromNotion();
+    console.log(11, posts)
+  } catch (error) {
+    console.log(12, error)
+  }
+  // End
+
   return {
-    props: { allPosts },
+    props: {
+      preview: preview || false,
+      allPosts,
+      posts,
+    },
+    revalidate: 10,
   }
 }
