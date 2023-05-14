@@ -3,7 +3,7 @@
   padding: 1.2rem 0;
   border-bottom: 1px solid #222;
   text-decoration: none;
-  color: #7a7e8f;
+  color: var(--white-50);
 }
 
 .wrapper:hover h3 {

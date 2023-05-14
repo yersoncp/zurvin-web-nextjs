@@ -29,7 +29,7 @@ export default function Post({ page, blocks }: PostProps) {
           </Head>
 
           <h1 style={{
-            fontSize: "2.4rem", fontWeight: 400, padding: "1rem 0", lineHeight: "3.6rem"
+            fontSize: "2.2rem", padding: "1.5rem 0", lineHeight: "3rem"
           }}>
             {page.properties.page.title[0].plain_text}
           </h1>

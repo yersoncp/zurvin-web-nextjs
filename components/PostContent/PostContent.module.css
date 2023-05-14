@@ -27,8 +27,8 @@
 
 .code {
   font-family: monospace;
-  color: #c2811f;
-  background: #2a2a2c;
+  color: var(--accent);
+  background: #28282b;
   padding: 2px 4px;
   border-radius: 2px;
 }
