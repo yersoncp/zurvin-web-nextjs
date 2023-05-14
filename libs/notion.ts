@@ -10,7 +10,7 @@ export const getDatabase = async () => {
     sorts: [
       {
         property: "date",
-        direction: "ascending"
+        direction: "descending"
       }
     ]
   });
