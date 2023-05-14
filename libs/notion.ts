@@ -23,7 +23,10 @@ export const getPage = async (pageId) => {
 };
 
 export const getBlocks = async (blockId) => {
-  blockId = blockId.replaceAll("-", "");
+
+  if (blockId) {
+    blockId = blockId.replaceAll("-", "");
+  }
 
   const { results } = await notion.blocks.children.list({
     block_id: blockId,
