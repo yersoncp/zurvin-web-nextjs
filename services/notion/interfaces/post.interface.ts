@@ -1,7 +1,22 @@
-export type PostType = {
+export interface IPostItem {
+  id: string;
+  cover?: string;
+  icon?: string;
+  properties: {
+    page: string;
+    slug: string;
+    excerpt: string;
+    date: string;
+    published: boolean;
+  }
+}
+
+export interface IPostItemApiResponse {
   id: string;
   cover: {
-    external: any
+    external: {
+      url: string
+    }
   },
   icon: {
     emoji: string
@@ -9,10 +24,9 @@ export type PostType = {
   properties: PostProperty
 }
 
-type PostProperty = {
+interface PostProperty {
   page: {
     id: string
-    type: string
     title: [
       {
         text: {
@@ -23,7 +37,17 @@ type PostProperty = {
   }
   slug: {
     id: string
-    type: string
+    rich_text: [
+      {
+        type: string
+        text: {
+          content: string
+        },
+      }
+    ]
+  },
+  excerpt: {
+    id: string
     rich_text: [
       {
         type: string
@@ -35,14 +59,12 @@ type PostProperty = {
   },
   date: {
     id: string
-    type: string
     date: {
       start: string
     }
   },
   published: {
     id: string
-    type: string
     checkbox: boolean
   },
 }

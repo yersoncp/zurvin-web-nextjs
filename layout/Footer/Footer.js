@@ -4,7 +4,7 @@ import ConvertKit from '../../components/ConvertKit/ConvertKit';
 const Footer = () => (
   <div className={s.footer}>
 
-    <ConvertKit />
+    {/* <ConvertKit /> */}
 
     <div className={s.copyright}>
       <span>2023 © Zurvin. Build with ❤️ using React.</span>

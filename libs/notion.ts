@@ -7,6 +7,12 @@ const notion = new Client({
 export const getDatabase = async () => {
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID,
+    sorts: [
+      {
+        property: "date",
+        direction: "ascending"
+      }
+    ]
   });
   return response.results;
 };

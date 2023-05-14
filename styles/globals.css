@@ -1,15 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  background: #0a0b0d;
-  color: #babcc4;
+  background: #171a1c;
+  color: #9295a2;
   height: 100%;
   font-family: sans-serif;
   font-weight: 200;
-  font-size: 17px;
+  font-size: 16px;
 }
 a, p {
   line-height: 30px;
+}
+h1, h2, h3, h4 {
+  color: #d7dee4;
+  margin: 2rem 0;
+}
+a {
+  color: #31b6ce;
 }
 .color-gradient {
   background-color: #fce043;

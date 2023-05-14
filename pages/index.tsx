@@ -2,14 +2,13 @@ import Layout from '../layout/Layout/Layout'
 import { IPost } from '../interfaces/post';
 import { getAllPosts } from '../libs/api'
 import PostPreview from '../components/PostPreview/PostPreview';
-import { getDatabase } from '../libs/notion';
-import Link from 'next/link';
 import { getPostsFromNotion } from '../services/notion/notion.service';
-import { PostType } from '../services/notion/types/post.interface';
+import { IPostItem } from '../services/notion/interfaces/post.interface';
+import PostExcerpt from '../components/PostExcerpt/PostExcerpt';
 
 type IPostProps = {
   allPosts: IPost[]
-  posts: PostType[]
+  posts: IPostItem[]
   preview: boolean
 }
 
@@ -20,13 +19,13 @@ export default function Index({ allPosts, posts }: IPostProps) {
   return (
     <Layout>
       <h2
-        style={{ fontSize: '5rem', fontFamily: 'Poppins', display: 'inline-block' }}
+        style={{ fontSize: '3.2rem', fontFamily: 'Poppins', fontWeight: 400 }}
         className="color-gradient"
       >
         Blog. Share.
       </h2>
 
-      <h3 style={{ fontSize: '2rem', fontFamily: 'Poppins', fontWeight: 400, color: '#fff' }}>Recientes</h3>
+      <h3 style={{ fontSize: '2rem', fontFamily: 'Poppins', fontWeight: 400, color: '#fff' }}>Artículos</h3>
       <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
         {recentPosts?.map(post => (
           <PostPreview
@@ -37,7 +36,6 @@ export default function Index({ allPosts, posts }: IPostProps) {
         ))}
       </div>
 
-      <h3 style={{ fontSize: '2rem', fontFamily: 'Poppins', fontWeight: 400, color: '#fff' }}>Artículos</h3>
       {otherPosts?.map((post, index) => (
         <PostPreview
           key={post.slug}
@@ -45,38 +43,18 @@ export default function Index({ allPosts, posts }: IPostProps) {
         />
       ))}
 
-      <h2>All Posts</h2>
-        <ol>
-          {posts?.map((post) => {
-            const date = new Date(post.properties.date.date.start).toLocaleString(
-              "en-US",
-              {
-                month: "short",
-                day: "2-digit",
-                year: "numeric",
-              }
-            );
-            return (
-              <li key={post.id}>
-                <h3>
-                  <Link href={`/${post.id}`}>
-                    {post.properties.page.title[0].text.content}
-                  </Link>
-                </h3>
-
-                <p>{date}</p>
-                <Link href={`/${post.id}`}>Read post →</Link>
-              </li>
-            );
-          })}
-        </ol>
+      {posts?.map((post) => (
+        <PostExcerpt
+          key={post.id}
+          post={post}
+        />
+      ))}
 
     </Layout>
   )
 }
 
-export const getStaticProps = async ({ preview }) => {
-  let posts = []
+export const getStaticProps = async () => {
   const allPosts = getAllPosts([
     'title',
     'date',
@@ -86,18 +64,10 @@ export const getStaticProps = async ({ preview }) => {
     'excerpt',
   ])
 
-  // Start
-  try {
-    posts = await getPostsFromNotion();
-    console.log(11, posts)
-  } catch (error) {
-    console.log(12, error)
-  }
-  // End
+  const posts: IPostItem[] = await getPostsFromNotion();
 
   return {
     props: {
-      preview: preview || false,
       allPosts,
       posts,
     },
