@@ -24,7 +24,7 @@ export const getPage = async (pageId) => {
 
 export const getBlocks = async (blockId) => {
   const { results } = await notion.blocks.children.list({
-    block_id: blockId?.replace(/-/g, " "),
+    block_id: blockId?.replace(/-/g, ""),
     page_size: 100,
   });
 
