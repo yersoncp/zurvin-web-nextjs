@@ -23,13 +23,8 @@ export const getPage = async (pageId) => {
 };
 
 export const getBlocks = async (blockId) => {
-
-  if (blockId) {
-    blockId = blockId.replaceAll("-", "");
-  }
-
   const { results } = await notion.blocks.children.list({
-    block_id: blockId,
+    block_id: blockId?.replaceAll("-", ""),
     page_size: 100,
   });
 
