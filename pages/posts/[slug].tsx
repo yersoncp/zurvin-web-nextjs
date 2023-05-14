@@ -1,89 +1,66 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import { getPostBySlug, getAllPosts } from '../../libs/api'
 import Head from 'next/head'
 import Layout from '../../layout/Layout/Layout'
-import PostBody from '../../components/PostBody/PostBody'
-import PostHeader from '../../components/PostHeader/PostHeader'
-import { IPost } from '../../interfaces/post'
+import { getBlocksBySlug, getPageBySlug, getPostsFromNotion } from '../../services/notion/notion.service'
+import PostContent from '../../components/PostContent/PostContent'
 
-type Props = {
-    post: IPost
-    morePosts: IPost[]
-    preview?: boolean
+type PostProps = {
+  page: any
+  blocks: any
 }
 
-export default function Post({ post, morePosts, preview }: Props) {
-    const router = useRouter()
-    if (!router.isFallback && !post?.slug) {
-        return <ErrorPage statusCode={404} />
-    }
-    return (
-        <Layout preview={preview}>
-            {router.isFallback ? (
-                <>Loading…</>
-            ) : (
-                <>
-                    <article className="mb-32">
-                        <Head>
-                            <title>
-                                {post.title} | Zurvin
-                            </title>
-                            <meta property="og:image" content={post.ogImage.url} />
-                        </Head>
-                        <PostHeader
-                            title={post.title}
-                            coverImage={post.coverImage}
-                            date={post.date}
-                            author={post.author}
-                        />
-                        <PostBody content={post.markdown} />
-                    </article>
-                </>
-            )}
-        </Layout>
-    )
+export default function Post({ page, blocks }: PostProps) {
+  const router = useRouter()
+
+  if (!router.isFallback && !page || !blocks) {
+    return <ErrorPage statusCode={404} />
+  }
+
+  return (
+    <Layout>
+      {router.isFallback ? (
+        <>Loading…</>
+      ) : (
+        <article>
+          <Head>
+            <title>{page.properties.page.title[0].plain_text} | Zurvin</title>
+            <meta property="og:image" content={page.cover?.external?.url} />
+          </Head>
+
+          <h1 style={{
+            fontSize: "2.4rem", fontWeight: 400, padding: "1rem 0", lineHeight: "3.6rem"
+          }}>
+            {page.properties.page.title[0].plain_text}
+          </h1>
+
+          <PostContent blocks={blocks} />
+        </article>
+      )}
+    </Layout>
+  )
 }
 
-type Params = {
-    params: {
-        slug: string
-    }
+export const getStaticProps = async (context) => {
+  const { slug } = context.params;
+  const page = await getPageBySlug(slug);
+  const blocks = await getBlocksBySlug(slug);
+
+  return {
+    props: {
+      page,
+      blocks,
+    },
+    revalidate: 1,
+  };
 }
 
-export async function getStaticProps({ params }: Params) {
-    const post = getPostBySlug(params.slug, [
-        'title',
-        'date',
-        'slug',
-        'author',
-        'content',
-        'ogImage',
-        'coverImage',
-    ])
-    const markdown = post.content
+export const getStaticPaths = async () => {
+  const database = await getPostsFromNotion();
 
-    return {
-        props: {
-            post: {
-                ...post,
-                markdown,
-            },
-        },
-    }
-}
+  return {
+    paths: database.map((page) => ({ params: { slug: page.properties.slug } })),
+    fallback: true,
+  };
 
-export async function getStaticPaths() {
-    const posts = getAllPosts(['slug'])
-
-    return {
-        paths: posts.map((post) => {
-            return {
-                params: {
-                    slug: post.slug,
-                },
-            }
-        }),
-        fallback: false,
-    }
 }

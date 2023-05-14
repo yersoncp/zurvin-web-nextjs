@@ -11,7 +11,7 @@ const PostExcerpt = ({ post }: PostExcerptProps) => {
     <>
       <Link
         className={s.wrapper}
-        href={`/post/${post.id}`}
+        href={`/posts/${post.properties.slug}`}
       >
         <h3 className={s.title}>
           {post.icon}

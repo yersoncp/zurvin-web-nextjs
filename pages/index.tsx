@@ -12,7 +12,7 @@ export default function Index({ posts }: IPostProps) {
   return (
     <Layout>
       <h2
-        style={{ fontSize: '3.2rem', fontFamily: 'Poppins', fontWeight: 400, display: "inline-block" }}
+        style={{ fontSize: '3.2rem', fontFamily: 'Poppins', fontWeight: 400, display: "inline-block", lineHeight: "inherit" }}
         className="color-gradient"
       >
         Blog. Share.

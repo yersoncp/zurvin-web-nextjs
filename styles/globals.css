@@ -14,6 +14,7 @@ a, p {
 h1, h2, h3, h4 {
   color: #d7dee4;
   margin: 2rem 0;
+  line-height: 2.4rem;
 }
 a {
   color: #31b6ce;
