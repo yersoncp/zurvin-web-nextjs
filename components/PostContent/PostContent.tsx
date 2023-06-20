@@ -132,11 +132,11 @@ const renderBlock = (block) => {
       return (
         <SyntaxHighlighter
           language={value.language}
-          showLineNumbers={true}
-          wrapLongLines={true}
+          showLineNumbers={false}
+          wrapLongLines={false}
           style={tomorrowNight}
           customStyle={{
-            fontSize: "14px", lineHeight: "22px",
+            fontSize: "14px", lineHeight: "22px", padding: "1.2rem", borderRadius: "4px",
           }}
         >
           {value.rich_text[0].plain_text}
