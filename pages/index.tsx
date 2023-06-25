@@ -3,6 +3,8 @@ import { getPostsFromNotion } from '../services/notion/notion.service';
 import { IPostItem } from '../services/notion/interfaces/post.interface';
 import PostExcerpt from '../components/PostExcerpt/PostExcerpt';
 import Text from '../components/Text/Text';
+import Stack from '../components/Stack/Stack';
+import { VSCodeIcon, GithubIcon, LinkedinIcon } from '../components/Icons';
 
 type IPostProps = {
   posts: IPostItem[]
@@ -12,36 +14,34 @@ type IPostProps = {
 export default function Index({ posts }: IPostProps) {
   return (
     <Layout>
-      <div style={{ margin: "5rem 0" }}>
-        <h2 style={{
-          fontSize: '2.8rem',
-          lineHeight: "inherit", color: "white",
-        }}>
-          Yerson
-        </h2>
-        <div style={{ lineHeight: "inherit", fontSize: "1.25rem" }}>
-          👨‍💻 Frontend Engineer
+      <Stack gap={4}>
+        <div style={{ margin: "4rem 0" }}>
+          <Stack gap={3}>
+            <Text variant='h1' color='white'>Yerson</Text>
+            <Text variant='h2' color='white'>Frontend Engineer 🤘</Text>
+
+            <div>
+              <VSCodeIcon />
+              <GithubIcon />
+              <LinkedinIcon />
+            </div>
+          </Stack>
         </div>
-        
-      </div>
 
-      <Text>
-        Artículos
-        <div style={{
-          color: "#888",
-          fontWeight: 400,
-          fontSize: "1.2rem",
-          margin: ".5rem 0"
-        }}>#react · #life</div>
-      </Text>
+        <Stack gap={2}>
+          <Text variant='h2' color='accent'>Artículos</Text>
+          <Text variant='body' color='gray'>#react · #life</Text>
+        </Stack>
 
-      {posts?.map((post) => (
-        <PostExcerpt
-          key={post.id}
-          post={post}
-        />
-      ))}
-
+        <div>
+          {posts?.map((post) => (
+            <PostExcerpt
+              key={post.id}
+              post={post}
+            />
+          ))}
+        </div>
+      </Stack>
     </Layout>
   )
 }
