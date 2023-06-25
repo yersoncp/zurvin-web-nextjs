@@ -16,6 +16,8 @@ const Header = () => (
 
          <div className={s.menuWrapper}>
             <Link href="/">Home</Link>
+            <Link href="/">Portafolio</Link>
+            <Link href="/">Blog</Link>
          </div>
       </div>
    </div>

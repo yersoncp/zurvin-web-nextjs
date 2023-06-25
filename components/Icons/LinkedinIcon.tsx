@@ -1,6 +1,6 @@
 export const Icon = () => {
   return <>
-    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+    <svg width="18px" height="18px" viewBox="0 0 20 20" version="1.1">
       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -7479.000000)" fill="currentColor">
           <g id="icons" transform="translate(56.000000, 160.000000)">

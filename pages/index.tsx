@@ -20,11 +20,17 @@ export default function Index({ posts }: IPostProps) {
             <Text variant='h1' color='white'>Yerson</Text>
             <Text variant='h2' color='white'>Frontend Engineer 🤘</Text>
 
-            <div>
-              <VSCodeIcon />
-              <GithubIcon />
-              <LinkedinIcon />
-            </div>
+            <Stack gap={1}>
+              <Text variant='body' color='gray'>
+                <VSCodeIcon /> 345 hours coding on 2023
+              </Text>
+              <Text variant='body' color='gray'>
+                <GithubIcon /> <a href="https://github.com/yersoncp" target='_blank'>yersoncp</a>
+              </Text>
+              <Text variant='body' color='gray'>
+                <LinkedinIcon /> <a href="https://www.linkedin.com/in/yerson" target='_blank'>yerson</a>
+              </Text>
+            </Stack>
           </Stack>
         </div>
 
