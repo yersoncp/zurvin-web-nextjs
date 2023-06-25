@@ -7,8 +7,8 @@ const Header = () => (
       <div className={s.header__inner}>
          <Link href="/" id="logo">
             <Image
-               width={30}
-               height={30}
+               width={24}
+               height={24}
                alt="Zurvin"
                src="/images/zurvin-logo-white.svg"
                />

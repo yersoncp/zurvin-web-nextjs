@@ -12,21 +12,27 @@ type IPostProps = {
 export default function Index({ posts }: IPostProps) {
   return (
     <Layout>
-      <h2 style={{
-        fontSize: '2.8rem', display: "inline-block",
-        lineHeight: "inherit", color: "white"
-      }}>
-        Blog. Share.
-      </h2>
-      
-      <div style={{
-        color: "#888",
-        fontWeight: 400,
-        paddingBottom: "2rem"
-      }}>#react · #life</div>
+      <div style={{ margin: "5rem 0" }}>
+        <h2 style={{
+          fontSize: '2.8rem',
+          lineHeight: "inherit", color: "white",
+        }}>
+          Yerson
+        </h2>
+        <div style={{ lineHeight: "inherit", fontSize: "1.25rem" }}>
+          👨‍💻 Frontend Engineer
+        </div>
+        
+      </div>
 
       <Text>
         Artículos
+        <div style={{
+          color: "#888",
+          fontWeight: 400,
+          fontSize: "1.2rem",
+          margin: ".5rem 0"
+        }}>#react · #life</div>
       </Text>
 
       {posts?.map((post) => (
