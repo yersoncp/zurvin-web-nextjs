@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { IPostItem } from '../../services/notion/interfaces/post.interface'
 import s from './PostExcerpt.module.css'
+import Text from '../Text/Text'
 
 type PostExcerptProps = {
   post: IPostItem
@@ -13,11 +14,9 @@ const PostExcerpt = ({ post }: PostExcerptProps) => {
         className={s.wrapper}
         href={`/posts/${post.properties.slug}`}
       >
-        <h3 className={s.title}>
-          {post.icon}
-          {" "}
-          {post.properties.page}
-        </h3>
+        <Text variant='h3' className={s.title} color='white'>
+          {post.icon} {" "} {post.properties.page}
+        </Text>
 
         <p className={s.content}>{post.properties.excerpt}</p>
 

@@ -24,7 +24,7 @@ export default function Index({ posts }: IPostProps) {
               I'm Frontend Engineer. I build scalable and maintainable applications for different industries.
             </Text>
 
-            <Stack gap={3} direction='row'>
+            <Stack gap={4} direction='row'>
               <a href="https://github.com/yersoncp" target='_blank'>
                 <GithubIcon />
               </a>

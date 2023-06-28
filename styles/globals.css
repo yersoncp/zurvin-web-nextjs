@@ -5,6 +5,7 @@
   --accent: #fef08a;
   --bg: #040404;
   --link: #fef08a;
+  --line: #222;
   --font: "IBM Plex Sans",Roboto,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Ubuntu,Cantarell,"Noto Sans",sans-serif,BlinkMacSystemFont,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
@@ -20,15 +21,7 @@ body {
 a, p {
   line-height: 32px;
 }
-h1, h2, h3, h4 {
-  color: var(--white-80);
-  margin: 2rem 0;
-  line-height: 2.4rem;
-  font-weight: 600;
-}
-h1 {
-  color: var(--white-100);
-}
+
 a {
   color: var(--link);
 }

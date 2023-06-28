@@ -6,15 +6,9 @@
   color: var(--white-50);
 }
 
-.wrapper:hover h3 {
+.wrapper:hover .title {
   text-decoration: underline;
   color: #fff;
-}
-
-.title {
-  transition: all .3s;
-  margin: 0;
-  font-size: 1.25em;
 }
 
 .content {
