@@ -19,14 +19,10 @@
   font-size: 12px;
   letter-spacing: 1px;
   border-radius: 4px;
-  padding: .5rem 1rem;
+  padding: .5rem 1.25rem;
 }
 
 .menuWrapper a:hover {
   color: #fff;
   background: #212121;
-}
-
-.menuWrapper>* {
-  margin-right: 1rem;
 }
