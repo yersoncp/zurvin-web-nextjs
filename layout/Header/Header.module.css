@@ -1,28 +1,17 @@
-.header__inner {
-  padding: 2rem 0;
+.header {
   display: flex;
-  align-items: center;
-  gap: 4rem;
-  border-bottom: 1px dotted #222;
+  justify-content: space-between;
+  padding: 4rem 0;
 }
 
-.logo img {
-  max-width: 100px;
-}
-
-.menuWrapper a {
-  color: #ccc;
+.menu > a {
+  color: var(--white-80);
   text-decoration: none;
-  transition: all .5s;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 200;
   letter-spacing: 1px;
-  border-radius: 4px;
-  padding: .5rem 1.25rem;
+  transition: all .3s;
 }
 
-.menuWrapper a:hover {
-  color: #fff;
-  background: #212121;
+.menu > a:hover {
+  color: var(--white-100);
 }

@@ -1,23 +1,24 @@
 .default {
   font-size: 14px;
   line-height: 20px;
+  letter-spacing: 1px;
 }
 
 /* Variants */
 .h1 {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 3rem;
-  line-height: 3rem;
+  line-height: 3.5rem;
 }
 
 .h2 {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
 }
 
 .h3 {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.25em;
   line-height: 1.25em;
 }
@@ -42,6 +43,15 @@
 }
 
 /* font-weight */
+.w100 {
+  font-weight: 100;
+}
+.w200 {
+  font-weight: 200;
+}
+.w300 {
+  font-weight: 300;
+}
 .w400 {
   font-weight: 400;
 }

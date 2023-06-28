@@ -6,7 +6,7 @@ type TextProps = {
   color?: "accent" | "gray" | "white"
   as?: "div" | "span"
   align?: "center" | "right"
-  weight?: 400 | 500 | 600 | 700
+  weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700
   children: ReactNode
   className?: string
 }
