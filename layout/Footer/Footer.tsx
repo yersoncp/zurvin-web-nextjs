@@ -11,7 +11,7 @@ const Footer = () => (
       alt="Zurvin"
       src="/images/zurvin-logo-white.svg"
     />
-    <Text color='gray'>2023 © Zurvin</Text>
+    <Text color='gray'>— 2023 © Zurvin</Text>
   </Stack>
 )
 

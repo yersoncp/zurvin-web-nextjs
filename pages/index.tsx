@@ -5,6 +5,8 @@ import PostExcerpt from '../components/PostExcerpt/PostExcerpt';
 import Text from '../components/Text/Text';
 import Stack from '../components/Stack/Stack';
 import { GithubIcon, LinkedinIcon } from '../components/Icons';
+import Link from 'next/link';
+import LabsGrid from '../components/LabsGrid/LabsGrid';
 
 type IPostProps = {
   posts: IPostItem[]
@@ -14,14 +16,14 @@ type IPostProps = {
 export default function Index({ posts }: IPostProps) {
   return (
     <Layout>
-      <Stack gap={4}>
-        <div style={{ margin: "8rem 0" }}>
-          <Stack gap={8}>
+      <Stack gap={8}>
+        <div style={{ margin: "5rem 0" }}>
+          <Stack gap={6}>
             <Text variant='h2' color='gray' weight={200}>
               Hi there, I'm Yerson 🤘
             </Text>
             <Text variant='h1' color='white' weight={200}>
-              I'm Frontend Engineer. I build scalable and maintainable applications for different industries.
+              I'm Frontend Engineer. I build scalable and maintainable web applications for different industries.
             </Text>
 
             <Stack gap={4} direction='row'>
@@ -35,16 +37,27 @@ export default function Index({ posts }: IPostProps) {
           </Stack>
         </div>
 
-        <Text variant='h2' color='accent'>Blog</Text>
+        <Stack gap={4}>
+          <Text variant='h2' color='white'>Labs</Text>
+          <LabsGrid />
+        </Stack>
 
-        <div>
-          {posts?.map((post) => (
-            <PostExcerpt
-              key={post.id}
-              post={post}
-            />
-          ))}
-        </div>
+        <Stack gap={4}>
+          <Text variant='h2' color='white'>Blog</Text>
+
+          <div>
+            {posts?.map((post) => (
+              <PostExcerpt
+                key={post.id}
+                post={post}
+              />
+            ))}
+          </div>
+
+          <Link href="/blog">
+            More articles →
+          </Link>
+        </Stack>
       </Stack>
     </Layout>
   )

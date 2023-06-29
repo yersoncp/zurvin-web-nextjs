@@ -24,4 +24,9 @@ a, p {
 
 a {
   color: var(--link);
+  text-decoration: none;
+  transition: all .3s;
+}
+a:hover {
+  text-decoration: underline;
 }

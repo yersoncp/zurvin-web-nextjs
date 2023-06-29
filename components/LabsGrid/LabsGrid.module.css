@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item {
+  background: var(--line);
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 300px;
+}

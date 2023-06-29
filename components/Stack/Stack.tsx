@@ -24,7 +24,7 @@ const Stack: FC<StackProps> = ({
   onClick,
   className = "",
 }) => {
-  const SIZE_BASE = 6;
+  const SIZE_BASE = 10;
 
   return (
     <div
