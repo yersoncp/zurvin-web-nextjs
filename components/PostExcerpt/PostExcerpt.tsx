@@ -14,13 +14,10 @@ const PostExcerpt = ({ post }: PostExcerptProps) => {
         className={s.wrapper}
         href={`/posts/${post.properties.slug}`}
       >
-        <Text variant='h3' className={s.title} color='white'>
+        <div className={s.date}>{post.properties.date}</div>
+        <Text variant='h3' className={s.title} color='gray'>
           {post.icon} {" "} {post.properties.page}
         </Text>
-
-        <p className={s.content}>{post.properties.excerpt}</p>
-
-        <div className={s.date}>{post.properties.date}</div>
       </Link>
     </>
   )

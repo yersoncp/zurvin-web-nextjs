@@ -4,7 +4,7 @@ import s from "./Text.module.css";
 type TextProps = {
   variant?: "h1" | "h2" | "h3" | "body" | "small"
   color?: "accent" | "gray" | "white"
-  as?: "div" | "span"
+  as?: "div" | "span" | "h1"
   align?: "center" | "right"
   weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700
   children: ReactNode

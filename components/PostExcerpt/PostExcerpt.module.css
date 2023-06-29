@@ -7,7 +7,6 @@
 }
 
 .wrapper:hover .title {
-  text-decoration: underline;
   color: #fff;
 }
 

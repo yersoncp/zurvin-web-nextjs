@@ -35,12 +35,7 @@ export default function Index({ posts }: IPostProps) {
           </Stack>
         </div>
 
-        <Stack gap={2}>
-          <Text variant='h2' color='accent'>
-            Artículos
-          </Text>
-          <Text variant='body' color='gray'>#react · #life</Text>
-        </Stack>
+        <Text variant='h2' color='accent'>Blog</Text>
 
         <div>
           {posts?.map((post) => (
@@ -56,7 +51,7 @@ export default function Index({ posts }: IPostProps) {
 }
 
 export const getStaticProps = async () => {
-  const posts: IPostItem[] = await getPostsFromNotion();
+  const posts: IPostItem[] = await getPostsFromNotion(4);
 
   return {
     props: {
