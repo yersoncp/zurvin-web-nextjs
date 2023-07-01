@@ -11,8 +11,16 @@
 }
 
 .item {
-  background: var(--line);
   border-radius: 1rem;
-  overflow: hidden;
-  height: 300px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+}
+
+.content {
+  line-height: 2.2rem;
+  padding: .5rem 1rem;
 }
