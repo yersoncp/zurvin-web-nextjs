@@ -17,8 +17,8 @@ export default function Index({ posts }: IPostProps) {
   return (
     <Layout>
       <Stack gap={8}>
-        <div style={{ margin: "5rem 0" }}>
-          <Stack gap={6}>
+        <div style={{ margin: "8rem 0" }}>
+          <Stack gap={8}>
             <Text variant='h2' color='gray' weight={200}>
               Hi there, I'm Yerson 🤘
             </Text>
