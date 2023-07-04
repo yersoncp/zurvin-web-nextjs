@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
-import Layout from '../../layout/Layout/Layout'
 import { getBlocksBySlug, getPageBySlug, getPostsFromNotion } from '../../services/notion/notion.service'
 import PostContent from '../../components/PostContent/PostContent'
 
@@ -18,7 +17,7 @@ export default function Post({ page, blocks }: PostProps) {
   }
 
   return (
-    <Layout>
+    <>
       {router.isFallback ? (
         <>Loading…</>
       ) : (
@@ -37,7 +36,7 @@ export default function Post({ page, blocks }: PostProps) {
           <PostContent blocks={blocks} />
         </article>
       )}
-    </Layout>
+    </>
   )
 }
 

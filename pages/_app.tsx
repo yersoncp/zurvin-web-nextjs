@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Script from "next/script";
 import { Analytics } from '@vercel/analytics/react';
 import Head from "next/head";
+import Layout from "../layout/Layout/Layout";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -34,7 +35,10 @@ function MyApp({ Component, pageProps }) {
             });
         `}
       </Script>
-      <Component {...pageProps} />
+
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
       <Analytics />
     </>
   );

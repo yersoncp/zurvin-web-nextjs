@@ -1,10 +1,9 @@
-import Layout from '../layout/Layout/Layout'
 import { getPostsFromNotion } from '../services/notion/notion.service';
 import { IPostItem } from '../services/notion/interfaces/post.interface';
+import { GithubIcon, LinkedinIcon } from '../components/Icons';
 import PostExcerpt from '../components/PostExcerpt/PostExcerpt';
 import Text from '../components/Text/Text';
 import Stack from '../components/Stack/Stack';
-import { GithubIcon, LinkedinIcon } from '../components/Icons';
 import Link from 'next/link';
 import LabsGrid from '../components/LabsGrid/LabsGrid';
 
@@ -15,7 +14,7 @@ type IPostProps = {
 
 export default function Index({ posts }: IPostProps) {
   return (
-    <Layout>
+    <>
       <Stack gap={12}>
         <div style={{ margin: "8rem 0" }}>
           <Stack gap={8}>
@@ -59,7 +58,7 @@ export default function Index({ posts }: IPostProps) {
           </Link>
         </Stack>
       </Stack>
-    </Layout>
+    </>
   )
 }
 
