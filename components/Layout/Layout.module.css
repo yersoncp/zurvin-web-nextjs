@@ -1,10 +1,17 @@
+.layout {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* header */
 .header {
   display: flex;
   justify-content: space-between;
   padding: 4rem 0;
 }
 
-.menu > a {
+.menu>a {
   color: var(--white-80);
   text-decoration: none;
   font-weight: 200;
@@ -12,6 +19,13 @@
   transition: all .3s;
 }
 
-.menu > a:hover {
+.menu>a:hover {
   color: var(--white-100);
+}
+
+/* footer */
+.footer {
+  border-top: 1px solid var(--line);
+  margin-top: 6rem;
+  padding: 4rem 0;
 }
