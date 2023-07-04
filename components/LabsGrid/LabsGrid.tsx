@@ -19,7 +19,7 @@ export const LabsGrid = () => {
             </Text>
             {" "}
             <Text as='span' color='gray' weight={200} variant='h3'>
-              Components created for building a dashboard.
+              Components created for building a dashboard
             </Text>
           </div>
         </Stack>
@@ -38,7 +38,7 @@ export const LabsGrid = () => {
             </Text>
             {" "}
             <Text as='span' color='gray' weight={200} variant='h3'>
-              Famous tetris game to practice my algorithm skills.
+              Famous tetris game to practice my algorithm skills
             </Text>
           </div>
         </Stack>

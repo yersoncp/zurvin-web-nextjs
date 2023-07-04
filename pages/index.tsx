@@ -64,7 +64,7 @@ export default function Index({ posts }: IPostProps) {
 }
 
 export const getStaticProps = async () => {
-  const posts: IPostItem[] = await getPostsFromNotion(4);
+  const posts: IPostItem[] = await getPostsFromNotion(6);
 
   return {
     props: {
