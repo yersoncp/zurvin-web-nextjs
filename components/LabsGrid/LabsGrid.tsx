@@ -2,11 +2,15 @@ import { FC } from 'react'
 import s from "./LabsGrid.module.css";
 import Text from '../Text/Text';
 import Stack from '../Stack/Stack';
+import Link from 'next/link';
 
 export const LabsGrid = () => {
   return (
     <div className={s.container}>
-      <div className={s.item}>
+      <Link
+        href="/posts/caso-de-estudio-componentes-personalizados-para-un-dasbhoard-en-react"
+        className={s.item}
+      >
         <Stack gap={2}>
           <img
             className={s.image}
@@ -23,9 +27,9 @@ export const LabsGrid = () => {
             </Text>
           </div>
         </Stack>
-      </div>
+      </Link>
 
-      <div className={s.item}>
+      {/* <div className={s.item}>
         <Stack gap={2}>
           <img
             className={s.image}
@@ -42,7 +46,7 @@ export const LabsGrid = () => {
             </Text>
           </div>
         </Stack>
-      </div>
+      </div> */}
     </div>
   )
 };
