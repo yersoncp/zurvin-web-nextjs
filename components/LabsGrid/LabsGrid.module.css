@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+@media (max-width: 560px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  border-radius: 1rem;
+}
+
+.item:hover {
+  text-decoration: none;
+  opacity: .65;
+}
+
+.image {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+}
+
+.content {
+  line-height: 2.2rem;
+  padding: .5rem 1rem;
+}

@@ -4,9 +4,10 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-export const getDatabase = async () => {
+export const getDatabase = async (pageSize = 0) => {
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID,
+    page_size: pageSize,
     sorts: [
       {
         property: "date",

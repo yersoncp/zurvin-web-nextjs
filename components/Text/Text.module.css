@@ -1,3 +1,77 @@
-.text {
+.default {
+  font-size: .96rem;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+/* Variants */
+.h1 {
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+.h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+}
+
+.h3 {
+  font-weight: 300;
+  font-size: 1.25em;
+  line-height: 1.25em;
+}
+
+.body {
+  font-weight: 400;
+  font-size: 1.12rem;
+}
+
+.small {
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+/* Aligns */
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* font-weight */
+.w100 {
+  font-weight: 100;
+}
+.w200 {
+  font-weight: 200;
+}
+.w300 {
+  font-weight: 300;
+}
+.w400 {
+  font-weight: 400;
+}
+.w500 {
+  font-weight: 500;
+}
+.w600 {
+  font-weight: 600;
+}
+.w700 {
+  font-weight: 700;
+}
+
+/* Colors */
+.accent {
   color: var(--accent);
+}
+.gray {
+  color:  var(--white-50);
+}
+.white {
+  color: var(--white-100);
 }
