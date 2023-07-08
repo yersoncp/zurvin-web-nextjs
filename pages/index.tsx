@@ -18,12 +18,14 @@ export default function Index({ posts }: IPostProps) {
       <Stack gap={12}>
         <div style={{ margin: "8rem 0" }}>
           <Stack gap={8}>
-            <Text variant='h2' color='gray' weight={200} as="h1">
-              Hi there, I'm Yerson 🤘
-            </Text>
-            <Text variant='h1' color='white' weight={200} as="h2">
-              I'm Frontend Engineer. I build scalable and maintainable web applications for different industries.
-            </Text>
+            <div>
+              <Text variant='h2' color='gray' weight={200} as="h1">
+                Hi, I'm Yerson 🤘
+              </Text>
+              <Text variant='h1' color='white' weight={200} as="h2">
+                I'm Frontend Engineer. I build scalable and maintainable web applications for different industries.
+              </Text>
+            </div>
 
             <Stack gap={4} direction='row'>
               <a href="https://github.com/yersoncp" target='_blank'>
