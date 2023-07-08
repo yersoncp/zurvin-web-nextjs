@@ -3,50 +3,41 @@ import s from "./LabsGrid.module.css";
 import Text from '../Text/Text';
 import Stack from '../Stack/Stack';
 import Link from 'next/link';
+import { Lab } from '../../services/labs/labs.type';
 
-export const LabsGrid = () => {
+type LabsGridProps = {
+  labs: Lab[],
+}
+
+export const LabsGrid = ({ labs }: LabsGridProps) => {
   return (
     <div className={s.container}>
-      <Link
-        href="/posts/caso-de-estudio-componentes-personalizados-para-un-dasbhoard-en-react"
-        className={s.item}
-      >
-        <Stack gap={2}>
-          <img
-            className={s.image}
-            src="/images/webui-components.jpg"
-            alt=""
-          />
-          <div className={s.content}>
-            <Text as='span' color='white' variant='h3'>
-              Web UI Components — 
-            </Text>
-            {" "}
-            <Text as='span' color='gray' weight={200} variant='h3'>
-              Components created for building a dashboard
-            </Text>
-          </div>
-        </Stack>
-      </Link>
-
-      {/* <div className={s.item}>
-        <Stack gap={2}>
-          <img
-            className={s.image}
-            src="/images/tetris.jpg"
-            alt=""
-          />
-          <div className={s.content}>
-            <Text as='span' color='white' variant='h3'>
-              Tetris experiment — 
-            </Text>
-            {" "}
-            <Text as='span' color='gray' weight={200} variant='h3'>
-              Famous tetris game to practice my algorithm skills
-            </Text>
-          </div>
-        </Stack>
-      </div> */}
+      {labs?.map((lab) => (
+        <Link
+          key={lab.id}
+          className={s.item}
+          href={lab.properties?.url}
+        >
+          <Stack gap={2}>
+            {lab.properties?.image && (
+              <img
+                className={s.image}
+                src={lab.properties.image}
+                alt={lab.properties.title}
+              />
+            )}
+            <div className={s.content}>
+              <Text as='span' color='white' variant='h3'>
+                {lab.properties.title} —
+              </Text>
+              {" "}
+              <Text as='span' color='gray' weight={200} variant='h3'>
+                {lab.properties.description}
+              </Text>
+            </div>
+          </Stack>
+        </Link>
+      ))}
     </div>
   )
 };

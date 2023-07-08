@@ -6,13 +6,16 @@ import Text from '../components/Text/Text';
 import Stack from '../components/Stack/Stack';
 import Link from 'next/link';
 import LabsGrid from '../components/LabsGrid/LabsGrid';
+import { getLabs } from '../services/labs/labs.service';
+import { Lab } from '../services/labs/labs.type';
 
-type IPostProps = {
+type IndexProps = {
   posts: IPostItem[]
+  labs: Lab[],
   preview: boolean
 }
 
-export default function Index({ posts }: IPostProps) {
+export default function Index({ posts, labs }: IndexProps) {
   return (
     <>
       <Stack gap={12}>
@@ -40,7 +43,7 @@ export default function Index({ posts }: IPostProps) {
 
         <Stack gap={4}>
           <Text variant='h2' color='white'>Labs</Text>
-          <LabsGrid />
+          <LabsGrid labs={labs} />
         </Stack>
 
         <Stack gap={4}>
@@ -66,10 +69,12 @@ export default function Index({ posts }: IPostProps) {
 
 export const getStaticProps = async () => {
   const posts: IPostItem[] = await getPostsFromNotion(6);
+  const labs = await getLabs();
 
   return {
     props: {
       posts,
+      labs,
     },
     revalidate: 10,
   }

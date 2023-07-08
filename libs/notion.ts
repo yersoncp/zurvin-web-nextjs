@@ -4,9 +4,14 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-export const getDatabase = async (pageSize = 0) => {
-  const response = await notion.databases.query({
-    database_id: process.env.NOTION_DATABASE_ID,
+export const getDatabase = async ({ databaseId, pageSize = 0 }) => {
+  if (!databaseId) {
+    console.error("DatabaseID not found");
+    return;
+  }
+
+  return notion.databases.query({
+    database_id: databaseId,
     page_size: pageSize,
     sorts: [
       {
@@ -14,13 +19,18 @@ export const getDatabase = async (pageSize = 0) => {
         direction: "descending"
       }
     ]
-  });
-  return response.results;
+  })
+    .then((response) => {
+      return response?.results;
+    })
+    .catch((error) => {
+      console.error(error);
+      return error
+    });
 };
 
 export const getPage = async (pageId) => {
-  const response = await notion.pages.retrieve({ page_id: pageId });
-  return response;
+  return notion.pages.retrieve({ page_id: pageId });
 };
 
 export const getBlocks = async (blockId) => {
