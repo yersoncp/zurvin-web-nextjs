@@ -5,7 +5,23 @@ import { Lab, LabApiResponse } from "./labs.type";
 export const getLabs = async (page?: number): Promise<Lab[]> => {
   const labs: LabApiResponse[] = await getDatabase({
     pageSize: page,
-    databaseId: process.env.NOTION_LABS_DATABASE_ID
+    databaseId: process.env.NOTION_LABS_DATABASE_ID,
+    filter: {
+      and: [
+        {
+          property: "status",
+          status: {
+            equals: "Done",
+          }
+        },
+        {
+          property: "image",
+          files: {
+            is_not_empty: true
+          }
+        }
+      ]
+    }
   });
 
   return labs?.map(lab => mapperToLabs(lab));

@@ -19,8 +19,8 @@ export default function Index({ posts, labs }: IndexProps) {
   return (
     <>
       <Stack gap={12}>
-        <div style={{ margin: "8rem 0" }}>
-          <Stack gap={8}>
+        <div style={{ margin: "6rem 0" }}>
+          <Stack gap={2}>
             <div>
               <Text variant='h2' color='gray' weight={200} as="h1">
                 Hi, I'm Yerson 🤘
