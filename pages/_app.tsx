@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Zurvin | React, NextJS, TypeScript y JavaScript</title>
-        <meta name="description" content="Contenido sobre React, NextJS, TypeScript y JavaScript. Descubre las últimas tendencias y novedades en el desarrollo web moderno y aprende a crear aplicaciones de alta calidad." />
+        <meta name="description" content="Bienvenido a mi web personal, un proyecto para aprender sobre React, NextJS y JavaScript." />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#080808" />
