@@ -3,6 +3,7 @@ import styles from "./PostContent.module.css";
 import Link from 'next/link'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNight } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { NotionImage } from '../NotionImage/NotionImage';
 import Text from '../Text/Text';
 
 export const TextField = ({ text }) => {
@@ -122,7 +123,11 @@ const renderBlock = (block) => {
       const caption = value.caption ? value.caption[0]?.plain_text : "";
       return (
         <figure>
-          <img src={src} alt={caption} />
+          <NotionImage
+            src={src}
+            alt={caption || "zurvin"}
+            blockId={block.id}
+          />
           {caption && <figcaption>{caption}</figcaption>}
         </figure>
       );
@@ -138,7 +143,7 @@ const renderBlock = (block) => {
           wrapLongLines={false}
           style={tomorrowNight}
           customStyle={{
-            fontSize: "14px", lineHeight: "22px", padding: "1.2rem", borderRadius: "4px",
+            fontSize: "14px", lineHeight: "18px", padding: "1.2rem", borderRadius: "4px",
           }}
         >
           {value.rich_text[0].plain_text}

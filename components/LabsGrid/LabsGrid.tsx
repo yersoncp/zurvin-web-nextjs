@@ -27,11 +27,11 @@ export const LabsGrid = ({ labs }: LabsGridProps) => {
               />
             )}
             <div className={s.content}>
-              <Text as='span' color='white' variant='h3'>
+              <Text as='span' color='white' variant='h4'>
                 {lab.properties.title} —
               </Text>
               {" "}
-              <Text as='span' color='gray' weight={200} variant='h3'>
+              <Text as='span' color='gray' weight={200} variant='h4'>
                 {lab.properties.description}
               </Text>
             </div>
