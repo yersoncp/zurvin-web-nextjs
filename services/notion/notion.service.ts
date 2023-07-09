@@ -5,7 +5,13 @@ import { mapperToPostItem } from "./notion.mapper";
 export const getPostsFromNotion = async (page?: number) => {
   const posts: IPostItemApiResponse[] = await getDatabase({
     pageSize: page,
-    databaseId: process.env.NOTION_POSTS_DATABASE_ID
+    databaseId: process.env.NOTION_POSTS_DATABASE_ID,
+    sorts: [
+      {
+        property: "date",
+        direction: "descending"
+      }
+    ]
   });
 
   return posts

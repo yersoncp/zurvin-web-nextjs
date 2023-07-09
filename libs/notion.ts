@@ -4,7 +4,12 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-export const getDatabase = async ({ databaseId, pageSize = 0, filter = undefined }) => {
+export const getDatabase = async ({
+  databaseId,
+  pageSize = 0,
+  filter = undefined,
+  sorts = undefined,
+}) => {
   if (!databaseId) {
     console.error("DatabaseID not found");
     return;
@@ -14,12 +19,7 @@ export const getDatabase = async ({ databaseId, pageSize = 0, filter = undefined
     database_id: databaseId,
     page_size: pageSize,
     filter,
-    sorts: [
-      {
-        property: "date",
-        direction: "descending"
-      }
-    ]
+    sorts,
   })
     .then((response) => {
       return response?.results;

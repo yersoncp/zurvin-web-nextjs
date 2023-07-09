@@ -28,10 +28,13 @@ export type LabApiResponse = {
     image: {
       id: string
       files: [{
-        file: {
+        name: string;
+        file?: {
           url: string
         };
-        name: string;
+        external?: {
+          url: string
+        }
       }]
     },
     url: {

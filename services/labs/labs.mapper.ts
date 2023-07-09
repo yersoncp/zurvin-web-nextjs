@@ -7,7 +7,9 @@ export const mapperToLabs = (lab: LabApiResponse): Lab => {
     properties: {
       title: lab.properties.title.title[0].plain_text,
       description: lab.properties.description.rich_text[0].plain_text,
-      image: lab.properties.image?.files?.[0]?.file.url || null,
+      image:
+        lab.properties.image?.files?.[0]?.file?.url ||
+        lab.properties.image?.files?.[0]?.external?.url || null,
       url: lab.properties.url?.url || null,
     }
   }
