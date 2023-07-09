@@ -29,6 +29,7 @@ export default function Post({ page, blocks }: PostProps) {
           </Head>
 
           <div style={{ marginBottom: '3rem' }}>
+            <Text color='gray'>BLOG</Text>
             <Text variant='h2' as='h1' color='white'>
               {page.properties.page.title[0].plain_text}
             </Text>

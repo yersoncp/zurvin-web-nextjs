@@ -85,3 +85,21 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+// https://github.com/railwayapp/blog/pull/18
+export const getChangelogImageSrc = async (blockId: string) => {
+  const supportedBlockType = "image"
+  const block: any = await notion.blocks.retrieve({ block_id: blockId })
+
+  if (block.type !== supportedBlockType) {
+    throw new Error("Block is not an image")
+  }
+
+  const image = block[supportedBlockType]
+
+  if (image.type === "external") {
+    return image.external.url
+  }
+
+  return image.file.url
+}
