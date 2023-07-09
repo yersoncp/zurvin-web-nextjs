@@ -3,8 +3,9 @@ import styles from "./PostContent.module.css";
 import Link from 'next/link'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNight } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import Text from '../Text/Text';
 
-export const Text = ({ text }) => {
+export const TextField = ({ text }) => {
   if (!text) {
     return null;
   }
@@ -16,6 +17,7 @@ export const Text = ({ text }) => {
     return (
       <span
         className={[
+          styles.text,
           bold ? styles.bold : "",
           code ? styles.code : "",
           italic ? styles.italic : "",
@@ -52,25 +54,25 @@ const renderBlock = (block) => {
     case "paragraph":
       return (
         <p>
-          <Text text={value.rich_text} />
+          <TextField text={value.rich_text} />
         </p>
       );
     case "heading_1":
       return (
         <h1>
-          <Text text={value.rich_text} />
+          <TextField text={value.rich_text} />
         </h1>
       );
     case "heading_2":
       return (
-        <h2>
-          <Text text={value.rich_text} />
-        </h2>
+        <Text variant='h3' as='h2' color='white'>
+          <TextField text={value.rich_text} />
+        </Text>
       );
     case "heading_3":
       return (
         <h3>
-          <Text text={value.rich_text} />
+          <TextField text={value.rich_text} />
         </h3>
       );
     case "bulleted_list": {
@@ -83,7 +85,7 @@ const renderBlock = (block) => {
     case "numbered_list_item":
       return (
         <li key={block.id}>
-          <Text text={value.rich_text} />
+          <TextField text={value.rich_text} />
           {!!value.children && renderNestedList(block)}
         </li>
       );
@@ -92,7 +94,7 @@ const renderBlock = (block) => {
         <div>
           <label htmlFor={id}>
             <input type="checkbox" id={id} defaultChecked={value.checked} />{" "}
-            <Text text={value.rich_text} />
+            <TextField text={value.rich_text} />
           </label>
         </div>
       );
@@ -100,7 +102,7 @@ const renderBlock = (block) => {
       return (
         <details>
           <summary>
-            <Text text={value.rich_text} />
+            <TextField text={value.rich_text} />
           </summary>
           {block.children?.map((child) => (
             <Fragment key={child.id}>{renderBlock(child)}</Fragment>
@@ -178,7 +180,7 @@ const renderBlock = (block) => {
                   {child.table_row?.cells?.map((cell, i) => {
                     return (
                       <RowElement key={`${cell.plain_text}-${i}`}>
-                        <Text text={cell} />
+                        <TextField text={cell} />
                       </RowElement>
                     );
                   })}

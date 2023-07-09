@@ -1,6 +1,7 @@
 :root {
   --white-100: #fff;
   --white-80: #bbb;
+  --white-70: #aaa;
   --white-50: #888;
   --accent: #fef08a;
   --bg: #040404;
@@ -13,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
   background: var(--bg);
-  color: var(--white-80);
+  color: var(--white-70);
   height: 100%;
   font-family: var(--font);
   font-size: 1.12rem;

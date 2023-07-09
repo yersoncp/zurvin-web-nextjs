@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react";
 import s from "./Text.module.css";
 
 type TextProps = {
-  variant?: "h1" | "h2" | "h3" | "body" | "small"
+  variant?: "h1" | "h2" | "h3" | "h4" | "body" | "small"
   color?: "accent" | "gray" | "white"
   as?: "div" | "span" | "h1" | "h2"
   align?: "center" | "right"
