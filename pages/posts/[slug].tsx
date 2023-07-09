@@ -3,6 +3,7 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { getBlocksBySlug, getPageBySlug, getPostsFromNotion } from '../../services/notion/notion.service'
 import PostContent from '../../components/PostContent/PostContent'
+import Text from '../../components/Text/Text'
 
 type PostProps = {
   page: any
@@ -27,11 +28,11 @@ export default function Post({ page, blocks }: PostProps) {
             <meta property="og:image" content={page.cover?.external?.url} />
           </Head>
 
-          <h1 style={{
-            fontSize: "2.2rem", padding: "1.5rem 0", lineHeight: "3rem"
-          }}>
-            {page.properties.page.title[0].plain_text}
-          </h1>
+          <div style={{ marginBottom: '3rem' }}>
+            <Text variant='h2' as='h1' color='white'>
+              {page.properties.page.title[0].plain_text}
+            </Text>
+          </div>
 
           <PostContent blocks={blocks} />
         </article>
