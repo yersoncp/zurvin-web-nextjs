@@ -1,15 +1,14 @@
 import PostExcerpt from "../../components/PostExcerpt/PostExcerpt"
 import Stack from "../../components/Stack/Stack"
 import Text from "../../components/Text/Text"
-import { IPostItem } from "../../services/notion/interfaces/post.interface"
-import { getPostsFromNotion } from "../../services/notion/notion.service"
+import { Post } from "../../services/post/post.type"
+import { getPostsFromNotion } from "../../services/post/post.service"
 
-type IPostProps = {
-  posts: IPostItem[]
-  preview: boolean
+type BlogProps = {
+  posts: Post[]
 }
 
-export default function Index({ posts }: IPostProps) {
+export default function Index({ posts }: BlogProps) {
   return (
     <>
       <Stack gap={4}>
@@ -29,7 +28,7 @@ export default function Index({ posts }: IPostProps) {
 }
 
 export const getStaticProps = async () => {
-  const posts: IPostItem[] = await getPostsFromNotion();
+  const posts: Post[] = await getPostsFromNotion();
 
   return {
     props: {

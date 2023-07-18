@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
-import { getBlocksBySlug, getPageBySlug, getPostsFromNotion } from '../../services/notion/notion.service'
+import { getBlocksBySlug, getPageBySlug, getPostsFromNotion } from '../../services/post/post.service'
 import PostContent from '../../components/PostContent/PostContent'
 import Text from '../../components/Text/Text'
 

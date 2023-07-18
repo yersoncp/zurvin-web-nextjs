@@ -1,6 +1,6 @@
-import { IPostItem, IPostItemApiResponse } from "./interfaces/post.interface"
+import { Post, PostApiResponse } from "./post.type"
 
-export const mapperToPostItem = (post: IPostItemApiResponse): IPostItem => {
+export const mapperToPostItem = (post: PostApiResponse): Post => {
   const date = new Date(post.properties.date.date.start).toLocaleString(
     "en-US",
     {

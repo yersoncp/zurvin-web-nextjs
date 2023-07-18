@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { IPostItem } from '../../services/notion/interfaces/post.interface'
+import { Post } from '../../services/post/post.type'
 import s from './PostExcerpt.module.css'
 import Text from '../Text/Text'
 
 type PostExcerptProps = {
-  post: IPostItem
+  post: Post
 }
 
 const PostExcerpt = ({ post }: PostExcerptProps) => {

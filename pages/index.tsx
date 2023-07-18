@@ -1,5 +1,5 @@
-import { getPostsFromNotion } from '../services/notion/notion.service';
-import { IPostItem } from '../services/notion/interfaces/post.interface';
+import { getPostsFromNotion } from '../services/post/post.service';
+import { Post } from '../services/post/post.type';
 import { GithubIcon, LinkedinIcon } from '../components/Icons';
 import PostExcerpt from '../components/PostExcerpt/PostExcerpt';
 import Text from '../components/Text/Text';
@@ -10,7 +10,7 @@ import { getLabs } from '../services/labs/labs.service';
 import { Lab } from '../services/labs/labs.type';
 
 type IndexProps = {
-  posts: IPostItem[]
+  posts: Post[]
   labs: Lab[],
   preview: boolean
 }
@@ -68,7 +68,7 @@ export default function Index({ posts, labs }: IndexProps) {
 }
 
 export const getStaticProps = async () => {
-  const posts: IPostItem[] = await getPostsFromNotion(6);
+  const posts: Post[] = await getPostsFromNotion(6);
   const labs = await getLabs();
 
   return {

@@ -1,9 +1,9 @@
 import { getBlocks, getDatabase, getPage } from "../../libs/notion";
-import { IPostItemApiResponse } from "./interfaces/post.interface";
-import { mapperToPostItem } from "./notion.mapper";
+import { PostApiResponse } from "./post.type";
+import { mapperToPostItem } from "./post.mapper";
 
 export const getPostsFromNotion = async (page?: number) => {
-  const posts: IPostItemApiResponse[] = await getDatabase({
+  const posts: PostApiResponse[] = await getDatabase({
     pageSize: page,
     databaseId: process.env.NOTION_POSTS_DATABASE_ID,
     sorts: [
