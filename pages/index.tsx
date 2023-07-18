@@ -1,4 +1,4 @@
-import { getPostsFromNotion } from '../services/post/post.service';
+import { getAllPosts } from '../services/post/post.service';
 import { Post } from '../services/post/post.type';
 import { GithubIcon, LinkedinIcon } from '../components/Icons';
 import PostExcerpt from '../components/PostExcerpt/PostExcerpt';
@@ -68,7 +68,7 @@ export default function Index({ posts, labs }: IndexProps) {
 }
 
 export const getStaticProps = async () => {
-  const posts: Post[] = await getPostsFromNotion(6);
+  const posts: Post[] = await getAllPosts(6);
   const labs = await getLabs();
 
   return {

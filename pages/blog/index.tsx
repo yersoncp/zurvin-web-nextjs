@@ -2,7 +2,7 @@ import PostExcerpt from "../../components/PostExcerpt/PostExcerpt"
 import Stack from "../../components/Stack/Stack"
 import Text from "../../components/Text/Text"
 import { Post } from "../../services/post/post.type"
-import { getPostsFromNotion } from "../../services/post/post.service"
+import { getAllPosts } from "../../services/post/post.service"
 
 type BlogProps = {
   posts: Post[]
@@ -28,7 +28,7 @@ export default function Index({ posts }: BlogProps) {
 }
 
 export const getStaticProps = async () => {
-  const posts: Post[] = await getPostsFromNotion();
+  const posts: Post[] = await getAllPosts();
 
   return {
     props: {

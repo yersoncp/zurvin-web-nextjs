@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
-import { getBlocksBySlug, getPageBySlug, getPostsFromNotion } from '../../services/post/post.service'
+import { getBlocksBySlug, getPageBySlug, getAllPosts } from '../../services/post/post.service'
 import PostContent from '../../components/PostContent/PostContent'
 import Text from '../../components/Text/Text'
 
@@ -57,7 +57,7 @@ export const getStaticProps = async (context) => {
 }
 
 export const getStaticPaths = async () => {
-  const database = await getPostsFromNotion();
+  const database = await getAllPosts();
 
   return {
     paths: database.map((page) => ({ params: { slug: page.properties.slug } })),
