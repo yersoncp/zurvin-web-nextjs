@@ -22,11 +22,11 @@ export default function Index({ posts, labs }: IndexProps) {
         <div style={{ margin: "6rem 0" }}>
           <Stack gap={2}>
             <div>
-              <Text variant='h2' color='gray' weight={200} as="h1">
-                Hi, I'm Yerson 🤘
+              <Text variant='h3' color='gray' weight={200} as="h1">
+                Soy Yerson, Frontend Developer 🤘
               </Text>
               <Text variant='h1' color='white' weight={200} as="h2">
-                I'm Frontend Engineer. I build scalable and maintainable web applications for different industries.
+                Construyo aplicaciones web escalables para diferentes industrias.
               </Text>
             </div>
 
@@ -41,10 +41,10 @@ export default function Index({ posts, labs }: IndexProps) {
           </Stack>
         </div>
 
-        <Stack gap={4}>
+        {/* <Stack gap={4}>
           <Text variant='h2' color='white'>Labs</Text>
           <LabsGrid labs={labs} />
-        </Stack>
+        </Stack> */}
 
         <Stack gap={4}>
           <Text variant='h2' color='white'>Blog</Text>
@@ -59,7 +59,7 @@ export default function Index({ posts, labs }: IndexProps) {
           </div>
 
           <Link href="/blog">
-            More articles →
+            Ver más artículos →
           </Link>
         </Stack>
       </Stack>

@@ -20,6 +20,7 @@ export const mapperToPostItem = (post: PostApiResponse): Post => {
       excerpt: post.properties.excerpt.rich_text?.[0]?.text.content,
       date,
       published: post.properties.published.checkbox,
+      url: post.properties.url.url,
     }
   }
 }

@@ -12,7 +12,8 @@ const PostExcerpt = ({ post }: PostExcerptProps) => {
     <>
       <Link
         className={s.wrapper}
-        href={`/posts/${post.properties.slug}`}
+        target="_blank"
+        href={`${post.properties.url}`}
       >
         <div className={s.date}>{post.properties.date}</div>
         <Text variant='h4' className={s.title} color='gray'>

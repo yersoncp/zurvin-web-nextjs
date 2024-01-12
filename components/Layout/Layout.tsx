@@ -9,8 +9,8 @@ const Layout = ({ children }) => (
     <header className={s.header}>
       <Link href="/">
         <Image
-          width={24}
-          height={24}
+          width={32}
+          height={32}
           alt="Zurvin"
           src="/images/zurvin-logo-white.svg"
         />
@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
           alt="Zurvin"
           src="/images/zurvin-logo-white.svg"
         />
-        <Text color='gray'>— 2023 © Zurvin</Text>
+        <Text color='gray'>Todo los derechos reservados — 2024 © Zurvin</Text>
       </Stack>
     </footer>
   </div>

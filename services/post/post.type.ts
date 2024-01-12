@@ -8,6 +8,7 @@ export type Post = {
     excerpt: string;
     date: string;
     published: boolean;
+    url: string;
   }
 }
 
@@ -42,6 +43,10 @@ export type PostApiResponse = {
           },
         }
       ]
+    },
+    url: {
+      id: string;
+      url: string;
     },
     excerpt: {
       id: string
