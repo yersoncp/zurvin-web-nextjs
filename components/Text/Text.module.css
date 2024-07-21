@@ -24,9 +24,16 @@
 
 .h4 {
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+
+.h5 {
+  font-weight: 300;
+  font-size: 1.12em;
   line-height: 1.6em;
 }
+
 
 .body {
   font-weight: 400;

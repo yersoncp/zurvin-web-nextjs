@@ -1,6 +1,6 @@
 .wrapper {
   display: block;
-  padding: 1.2rem 0 1.8rem;
+  padding: .8rem 0 1.2rem;
   border-bottom: 1px solid var(--line);
   color: var(--white-50);
   transition: all .3s;
@@ -13,6 +13,11 @@
 
 .wrapper:hover .title {
   color: #fff;
+  transition: all .3s;
+}
+
+.wrapper .title {
+  font-size: 1.4rem;
 }
 
 .content {
@@ -22,6 +27,6 @@
 
 .date {
   font-size: 12px;
-  color: #4e515e;
+  color: #6e7282;
   text-transform: uppercase;
 }

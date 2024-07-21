@@ -33,7 +33,9 @@ const Layout = ({ children }) => (
           alt="Zurvin"
           src="/images/zurvin-logo-white.svg"
         />
-        <Text color='gray'>Todo los derechos reservados — 2024 © Zurvin</Text>
+        <Text color='gray' className={s.title}>
+          Todo los derechos reservados — 2024 ©
+        </Text>
       </Stack>
     </footer>
   </div>

@@ -1,23 +1,44 @@
-import { FC } from 'react'
 import s from "./LabsGrid.module.css";
-import Text from '../Text/Text';
-import Stack from '../Stack/Stack';
-import Link from 'next/link';
-import { Lab } from '../../services/labs/labs.type';
+import Text from "../Text/Text";
+import Stack from "../Stack/Stack";
+import Link from "next/link";
+import { Lab } from "../../services/labs/labs.type";
 
-type LabsGridProps = {
-  labs: Lab[],
-}
+const labs: Lab[] = [
+  {
+    id: "1",
+    properties: {
+      title: "Zurvin",
+      description: "Aprende a construir aplicaciones web con React y Next.js",
+      image: "/images/webui-components.jpg",
+      url: "/zurvin",
+    },
+  },
+  {
+    id: "2",
+    properties: {
+      title: "Zurvin",
+      description: "Aprende a construir aplicaciones web con React y Next.js",
+      image: "/images/bbva-call-center.png",
+      url: "/zurvin",
+    },
+  },
+  {
+    id: "3",
+    properties: {
+      title: "Zurvin",
+      description: "Aprende a construir aplicaciones web con React y Next.js",
+      image: "/images/webui-components.jpg",
+      url: "/zurvin",
+    },
+  },
+];
 
-export const LabsGrid = ({ labs }: LabsGridProps) => {
+export const LabsGrid = () => {
   return (
     <div className={s.container}>
       {labs?.map((lab) => (
-        <Link
-          key={lab.id}
-          className={s.item}
-          href={lab.properties?.url}
-        >
+        <Link key={lab.id} className={s.item} href={lab.properties?.url}>
           <Stack gap={2}>
             {lab.properties?.image && (
               <img
@@ -27,11 +48,10 @@ export const LabsGrid = ({ labs }: LabsGridProps) => {
               />
             )}
             <div className={s.content}>
-              <Text as='span' color='white' variant='h4'>
+              <Text as="span" color="white" variant="h5">
                 {lab.properties.title} —
-              </Text>
-              {" "}
-              <Text as='span' color='gray' weight={200} variant='h4'>
+              </Text>{" "}
+              <Text as="span" color="gray" variant="h5">
                 {lab.properties.description}
               </Text>
             </div>
@@ -39,7 +59,7 @@ export const LabsGrid = ({ labs }: LabsGridProps) => {
         </Link>
       ))}
     </div>
-  )
+  );
 };
 
-export default LabsGrid
+export default LabsGrid;
